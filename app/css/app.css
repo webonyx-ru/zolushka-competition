@@ -1945,6 +1945,10 @@
   font-size: 30px;
 }
 
+.fw-fz-52 {
+  font-size: 52px;
+}
+
 .fw-fz-60 {
   font-size: 60px;
 }
@@ -2168,11 +2172,11 @@
   clear: both;
 }
 
-.fw-text-left {
+.fw-left {
   float: left;
 }
 
-.fw-text-right {
+.fw-right {
   float: right;
 }
 
@@ -2302,8 +2306,8 @@
 }
 
 .icon-heart {
-  background-image: url('../images/icons-sc46000ebff.png');
-  background-position: 0 -44px;
+  background-image: url('../images/icons-se73509b4d5.png');
+  background-position: 0 -89px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2313,17 +2317,17 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-heart {
-    background-image: url('../images/icons-2x-s85a850c4e3.png');
+    background-image: url('../images/icons-2x-s75e85334ea.png');
     background-size: 55px auto;
-    background-position: 0 -42px;
+    background-position: 0 -84px;
     height: 19px;
     width: 21px;
   }
 }
 
 .icon-instagram-white {
-  background-image: url('../images/icons-sc46000ebff.png');
-  background-position: 0 -68px;
+  background-image: url('../images/icons-se73509b4d5.png');
+  background-position: 0 -113px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2333,16 +2337,16 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-instagram-white {
-    background-image: url('../images/icons-2x-s85a850c4e3.png');
+    background-image: url('../images/icons-2x-s75e85334ea.png');
     background-size: 55px auto;
-    background-position: 0 -63px;
+    background-position: 0 -106px;
     height: 30px;
     width: 30px;
   }
 }
 
 .icon-denim-logo {
-  background-image: url('../images/icons-sc46000ebff.png');
+  background-image: url('../images/icons-se73509b4d5.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -2353,11 +2357,31 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-denim-logo {
-    background-image: url('../images/icons-2x-s85a850c4e3.png');
+    background-image: url('../images/icons-2x-s75e85334ea.png');
     background-size: 55px auto;
     background-position: 0 0;
     height: 39px;
     width: 39px;
+  }
+}
+
+.icon-for-adult-white {
+  background-image: url('../images/icons-se73509b4d5.png');
+  background-position: 0 -44px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .icon-for-adult-white {
+    background-image: url('../images/icons-2x-s75e85334ea.png');
+    background-size: 55px auto;
+    background-position: 0 -42px;
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -2478,8 +2502,8 @@ hr {
   background-color: transparent;
 }
 .header.header--transparent .logo {
-  background-image: url('../images/icons-sc46000ebff.png');
-  background-position: 0 -133px;
+  background-image: url('../images/icons-se73509b4d5.png');
+  background-position: 0 -178px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2489,16 +2513,16 @@ hr {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .header.header--transparent .logo {
-    background-image: url('../images/icons-2x-s85a850c4e3.png');
+    background-image: url('../images/icons-2x-s75e85334ea.png');
     background-size: 55px auto;
-    background-position: 0 -123px;
+    background-position: 0 -166px;
     height: 25px;
     width: 55px;
   }
 }
 .header .logo {
-  background-image: url('../images/icons-sc46000ebff.png');
-  background-position: 0 -103px;
+  background-image: url('../images/icons-se73509b4d5.png');
+  background-position: 0 -148px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -2508,9 +2532,9 @@ hr {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .header .logo {
-    background-image: url('../images/icons-2x-s85a850c4e3.png');
+    background-image: url('../images/icons-2x-s75e85334ea.png');
     background-size: 55px auto;
-    background-position: 0 -96px;
+    background-position: 0 -138px;
     height: 25px;
     width: 55px;
   }
