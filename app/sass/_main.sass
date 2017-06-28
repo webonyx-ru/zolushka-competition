@@ -1,11 +1,21 @@
-html, body
+body
+  font-family: 'Helvetica Neue', 'Lato', sans-serif
   font-size: 14px
+  font-weight: normal
+
+hr
+  height: 1px
+  opacity: 0.3
+  background-color: $colorBlack
 
 .wrapper
   max-width: 100%
   width: 100%
   overflow: hidden
   min-width: 1140px
+  display: flex
+  flex-direction: column
+  min-height: 100vh
 
 .container
   max-width: 1140px
@@ -16,6 +26,37 @@ html, body
 
   @media screen and (min-width: 1140px)
     padding: 0
+
+.button
+  min-width: 205px
+  display: inline-flex
+  height: 47px
+  align-items: center
+  justify-content: center
+  box-sizing: border-box
+  padding: 3px 5px
+  color: $colorBlack
+  background-color: $colorBlueLight
+  transition: all .3s ease-in-out
+  text-transform: uppercase
+  border: 2px solid $colorBlueLight
+  border-radius: 100px
+  text-decoration: none
+  outline: none
+  font-weight: bold
+  font-size: 14px
+
+  &:hover
+    background-color: $colorBlueLight * .9
+    border-color: $colorBlueLight * .9
+
+  &.button-yellow
+    background: $colorYellow
+    border-color: $colorYellow
+
+    &:hover
+      background-color: $colorYellow * .9
+      border-color: $colorYellow * .9
 
 .list-unstyled
   list-style: none

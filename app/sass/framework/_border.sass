@@ -19,7 +19,7 @@
     border-radius: #{$value}px
 
   .fw-border-radius-percent-#{$value}
-    border-radius: #{$value}px
+    border-radius: unquote("#{$value}%")
 
 
 @each $value in white_#{$colorWhite}, yellow_#{$colorYellow}, black_#{$colorBlack}, cyan_#{$colorCyan}, blue-light_#{$colorBlueLight}, grey-dark_#{$colorGreyDark}, pink_#{$colorPink}

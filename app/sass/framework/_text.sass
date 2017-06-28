@@ -24,7 +24,27 @@
     @media screen and (min-width: $large)
       float: $value
 
-@each $value in underline, line-through, capitalize, lowercase, uppercase
+@each $value in capitalize, lowercase, uppercase
+  .fw-text-#{$value}
+    text-transform: $value
+
+  .fw-text-#{$value}\@xs
+    @media screen and (min-width: $extraSmall)
+      text-transform: $value
+
+  .fw-text-#{$value}\@s
+    @media screen and (min-width: $small)
+      text-transform: $value
+
+  .fw-text-#{$value}\@m
+    @media screen and (min-width: $medium)
+      text-transform: $value
+
+  .fw-text-#{$value}\@l
+    @media screen and (min-width: $large)
+      text-transform: $value
+
+@each $value in underline, line-through,
   .fw-text-#{$value}
     text-decoration: $value
 
