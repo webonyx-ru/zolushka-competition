@@ -823,6 +823,14 @@
   margin-top: auto;
 }
 
+.fw-mr-auto {
+  margin-right: auto;
+}
+
+.fw-ml-auto {
+  margin-left: auto;
+}
+
 .fw-mt-0 {
   margin-top: 0px;
 }
