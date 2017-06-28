@@ -1,4 +1,4 @@
-@each $value in white_#{$colorWhite}, yellow_#{$colorYellow}, black_#{$colorBlack}, grey_#{$colorGrey}, cyan_#{$colorCyan}, blue-light_#{$colorBlueLight}, grey-light_#{$colorGreyLight}, grey-dark_#{$colorGreyDark}, pink_#{$colorPink}, light_#{$colorLight}
+@each $value in white_#{$colorWhite}, yellow_#{$colorYellow}, black_#{$colorBlack}, grey_#{$colorGrey}, cyan_#{$colorCyan}, blue-light_#{$colorBlueLight}, grey-light_#{$colorGreyLight}, grey-dark_#{$colorGreyDark}, pink_#{$colorPink}, light_#{$colorLight}, white-light_#{$colorWhiteDark}
   $values: str_split($value, '_')
   $color: nth($values, 2)
   $colorName: nth($values, 1)
@@ -9,14 +9,11 @@
   .fw-color-#{$colorName}
     color: $color
 
-  .fw-shadow-top-#{$colorName}
-    box-shadow: inset  0  10px 10px -10px $color
-
   .fw-shadow-bottom-#{$colorName}
-    box-shadow: inset  0 -10px 10px -10px $color
+    box-shadow: inset  0 -70px 120px -10px $color
 
-  .fw-shadow-top-bottom-#{$colorName}
-    box-shadow: inset  0 -10px 10px -10px $color
+.fw-shadow-bottom
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1)
 
 .fw-bg-cover
   background-size: cover
