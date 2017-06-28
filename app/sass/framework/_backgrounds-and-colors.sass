@@ -9,6 +9,15 @@
   .fw-color-#{$colorName}
     color: $color
 
+  .fw-shadow-top-#{$colorName}
+    box-shadow: inset  0  10px 10px -10px rgba($color, .7)
+
+  .fw-shadow-bottom-#{$colorName}
+    box-shadow: inset  0 -10px 10px -10px rgba($color, .7)
+
+  .fw-shadow-top-bottom-#{$colorName}
+    box-shadow: inset  0 -10px 10px -10px rgba($color, .7)
+
 .fw-bg-cover
   background-size: cover
 
