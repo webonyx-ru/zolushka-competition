@@ -1941,6 +1941,12 @@
   font-size: 60px;
 }
 
+.fw-font-georgia {
+  font-family: "Georgia", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .fw-font-futura-demic {
   font-family: "FuturaDemiC", sans-serif;
 }

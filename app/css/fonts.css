@@ -13,9 +13,9 @@
 
 @font-face {
 	font-family: 'Georgia';
-	src: url('../fonts/georgia bold.eot');
-	src: url('../fonts/georgia bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/georgia bold.woff2') format('woff2'),
+	src: url('../fonts/georgiab.eot');
+	src: url('../fonts/georgiab.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/georgiab.woff2') format('woff2'),
 		url('../fonts/Georgia-Bold.woff') format('woff'),
 		url('../fonts/Georgia-Bold.ttf') format('truetype');
 	font-weight: bold;
