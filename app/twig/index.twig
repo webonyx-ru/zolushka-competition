@@ -1,11 +1,12 @@
 {% extends 'layouts/app.twig' %}
 
 {% block content %}
-    {% include 'layouts/header.twig' %}
+    <div class="fw-absolute fw-width-1-1 fw-min-width-1140">
+        {% include 'layouts/header.twig' with {'transparent': 'header--transparent'} %}
+    </div>
 
     <div class="fw-bg-cover fw-bg-top-center fw-bg-no-repeat fw-min-height-550 fw-bg-fixed" style="background-image: url('images/pages/index/bg.jpg')">
-        <div class="container">
-
+        <div class="container fw-flex fw-height-1-1 fw-flex-middle">
         </div>
     </div>
     <div class="fw-mt-50">

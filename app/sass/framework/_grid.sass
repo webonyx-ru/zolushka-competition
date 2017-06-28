@@ -58,22 +58,6 @@
 .fw-grid-bottom
   align-items: flex-end
 
-.fw-grid-bottom\@xs
-  @media screen and (min-width: $extraSmall)
-    align-items: flex-end
-
-.fw-grid-bottom\@s
-  @media screen and (min-width: $small)
-    align-items: flex-end
-
-.fw-grid-bottom\@m
-  @media screen and (min-width: $medium)
-    align-items: flex-end
-
-.fw-grid-bottom\@l
-  @media screen and (min-width: $large)
-    align-items: flex-end
-
 @each $value in 0, 10, 15, 20, 30, 40, 50
   .fw-grid-#{$value}
     margin-left: -#{$value}px
@@ -83,43 +67,3 @@
       box-sizing: border-box
       padding-left: #{$value}px
       margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@s
-    @media screen and (min-width: $small)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@m
-    @media screen and (min-width: $medium)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@l
-    @media screen and (min-width: $large)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px

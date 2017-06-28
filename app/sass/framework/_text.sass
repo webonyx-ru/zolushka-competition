@@ -8,107 +8,19 @@
   .fw-text-#{$value}
     float: $value
 
-  .fw-text-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      float: $value
-
-  .fw-text-#{$value}\@s
-    @media screen and (min-width: $small)
-      float: $value
-
-  .fw-text-#{$value}\@m
-    @media screen and (min-width: $medium)
-      float: $value
-
-  .fw-text-#{$value}\@l
-    @media screen and (min-width: $large)
-      float: $value
-
 @each $value in capitalize, lowercase, uppercase
   .fw-text-#{$value}
     text-transform: $value
 
-  .fw-text-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      text-transform: $value
-
-  .fw-text-#{$value}\@s
-    @media screen and (min-width: $small)
-      text-transform: $value
-
-  .fw-text-#{$value}\@m
-    @media screen and (min-width: $medium)
-      text-transform: $value
-
-  .fw-text-#{$value}\@l
-    @media screen and (min-width: $large)
-      text-transform: $value
-
 @each $value in underline, line-through, none
   .fw-text-#{$value}
     text-decoration: $value
-
-  .fw-text-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      text-decoration: $value
-
-  .fw-text-#{$value}\@s
-    @media screen and (min-width: $small)
-      text-decoration: $value
-
-  .fw-text-#{$value}\@m
-    @media screen and (min-width: $medium)
-      text-decoration: $value
-
-  .fw-text-#{$value}\@l
-    @media screen and (min-width: $large)
-      text-decoration: $value
 
   .fw-text-#{$value}-hover
     text-decoration: none
     &:hover
       text-decoration: $value
 
-  .fw-text-#{$value}-hover\@xs
-    text-decoration: none
-    @media screen and (min-width: $extraSmall)
-      &:hover
-        text-decoration: $value
-
-  .fw-text-#{$value}-hover\@s
-    text-decoration: none
-    @media screen and (min-width: $small)
-      &:hover
-        text-decoration: $value
-
-  .fw-text-#{$value}-hover\@m
-    text-decoration: none
-    @media screen and (min-width: $medium)
-      &:hover
-        text-decoration: $value
-
-  .fw-text-#{$value}-hover\@l
-    text-decoration: none
-    @media screen and (min-width: $large)
-      &:hover
-        text-decoration: $value
-
 @each $value in center, left, right
   .fw-text-#{$value}
     text-align: $value
-
-  .fw-text-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      text-align: $value
-
-  .fw-text-#{$value}\@s
-    @media screen and (min-width: $small)
-      text-align: $value
-
-  .fw-text-#{$value}\@m
-    @media screen and (min-width: $medium)
-      text-align: $value
-
-  .fw-text-#{$value}\@l
-    @media screen and (min-width: $large)
-      text-align: $value
