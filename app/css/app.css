@@ -2123,12 +2123,14 @@
 }
 
 .fw-grid {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (min-width: 0) {
   .fw-grid\@xs {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -2136,6 +2138,7 @@
 
 @media screen and (min-width: 480px) {
   .fw-grid\@s {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -2143,6 +2146,7 @@
 
 @media screen and (min-width: 768px) {
   .fw-grid\@m {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -2150,18 +2154,21 @@
 
 @media screen and (min-width: 1140px) {
   .fw-grid\@l {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
 .fw-grid-top {
+  -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
 @media screen and (min-width: 0) {
   .fw-grid-top\@xs {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
@@ -2169,6 +2176,7 @@
 
 @media screen and (min-width: 480px) {
   .fw-grid-top\@s {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
@@ -2176,6 +2184,7 @@
 
 @media screen and (min-width: 768px) {
   .fw-grid-top\@m {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
@@ -2183,18 +2192,21 @@
 
 @media screen and (min-width: 1140px) {
   .fw-grid-top\@l {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 
 .fw-grid-middle {
+  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 @media screen and (min-width: 0) {
   .fw-grid-middle\@xs {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
@@ -2202,6 +2214,7 @@
 
 @media screen and (min-width: 480px) {
   .fw-grid-middle\@s {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
@@ -2209,6 +2222,7 @@
 
 @media screen and (min-width: 768px) {
   .fw-grid-middle\@m {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
@@ -2216,18 +2230,21 @@
 
 @media screen and (min-width: 1140px) {
   .fw-grid-middle\@l {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 
 .fw-grid-bottom {
+  -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 
 @media screen and (min-width: 0) {
   .fw-grid-bottom\@xs {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
@@ -2235,6 +2252,7 @@
 
 @media screen and (min-width: 480px) {
   .fw-grid-bottom\@s {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
@@ -2242,6 +2260,7 @@
 
 @media screen and (min-width: 768px) {
   .fw-grid-bottom\@m {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
@@ -2249,6 +2268,7 @@
 
 @media screen and (min-width: 1140px) {
   .fw-grid-bottom\@l {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
@@ -2259,6 +2279,7 @@
   margin-bottom: -0px;
 }
 .fw-grid-0 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 0px;
   margin-bottom: 0px;
@@ -2270,6 +2291,7 @@
     margin-bottom: -0px;
   }
   .fw-grid-0\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -2282,6 +2304,7 @@
     margin-bottom: -0px;
   }
   .fw-grid-0\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -2294,6 +2317,7 @@
     margin-bottom: -0px;
   }
   .fw-grid-0\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -2306,6 +2330,7 @@
     margin-bottom: -0px;
   }
   .fw-grid-0\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -2317,6 +2342,7 @@
   margin-bottom: -15px;
 }
 .fw-grid-15 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 15px;
   margin-bottom: 15px;
@@ -2328,6 +2354,7 @@
     margin-bottom: -15px;
   }
   .fw-grid-15\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 15px;
     margin-bottom: 15px;
@@ -2340,6 +2367,7 @@
     margin-bottom: -15px;
   }
   .fw-grid-15\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 15px;
     margin-bottom: 15px;
@@ -2352,6 +2380,7 @@
     margin-bottom: -15px;
   }
   .fw-grid-15\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 15px;
     margin-bottom: 15px;
@@ -2364,6 +2393,7 @@
     margin-bottom: -15px;
   }
   .fw-grid-15\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 15px;
     margin-bottom: 15px;
@@ -2375,6 +2405,7 @@
   margin-bottom: -20px;
 }
 .fw-grid-20 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 20px;
   margin-bottom: 20px;
@@ -2386,6 +2417,7 @@
     margin-bottom: -20px;
   }
   .fw-grid-20\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -2398,6 +2430,7 @@
     margin-bottom: -20px;
   }
   .fw-grid-20\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -2410,6 +2443,7 @@
     margin-bottom: -20px;
   }
   .fw-grid-20\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -2422,6 +2456,7 @@
     margin-bottom: -20px;
   }
   .fw-grid-20\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -2433,6 +2468,7 @@
   margin-bottom: -30px;
 }
 .fw-grid-30 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 30px;
   margin-bottom: 30px;
@@ -2444,6 +2480,7 @@
     margin-bottom: -30px;
   }
   .fw-grid-30\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
     margin-bottom: 30px;
@@ -2456,6 +2493,7 @@
     margin-bottom: -30px;
   }
   .fw-grid-30\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
     margin-bottom: 30px;
@@ -2468,6 +2506,7 @@
     margin-bottom: -30px;
   }
   .fw-grid-30\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
     margin-bottom: 30px;
@@ -2480,6 +2519,7 @@
     margin-bottom: -30px;
   }
   .fw-grid-30\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 30px;
     margin-bottom: 30px;
@@ -2491,6 +2531,7 @@
   margin-bottom: -40px;
 }
 .fw-grid-40 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 40px;
   margin-bottom: 40px;
@@ -2502,6 +2543,7 @@
     margin-bottom: -40px;
   }
   .fw-grid-40\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 40px;
     margin-bottom: 40px;
@@ -2514,6 +2556,7 @@
     margin-bottom: -40px;
   }
   .fw-grid-40\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 40px;
     margin-bottom: 40px;
@@ -2526,6 +2569,7 @@
     margin-bottom: -40px;
   }
   .fw-grid-40\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 40px;
     margin-bottom: 40px;
@@ -2538,6 +2582,7 @@
     margin-bottom: -40px;
   }
   .fw-grid-40\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 40px;
     margin-bottom: 40px;
@@ -2549,6 +2594,7 @@
   margin-bottom: -50px;
 }
 .fw-grid-50 > * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 50px;
   margin-bottom: 50px;
@@ -2560,6 +2606,7 @@
     margin-bottom: -50px;
   }
   .fw-grid-50\@xs > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 50px;
     margin-bottom: 50px;
@@ -2572,6 +2619,7 @@
     margin-bottom: -50px;
   }
   .fw-grid-50\@s > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 50px;
     margin-bottom: 50px;
@@ -2584,6 +2632,7 @@
     margin-bottom: -50px;
   }
   .fw-grid-50\@m > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 50px;
     margin-bottom: 50px;
@@ -2596,6 +2645,7 @@
     margin-bottom: -50px;
   }
   .fw-grid-50\@l > * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 50px;
     margin-bottom: 50px;
@@ -11567,6 +11617,7 @@
 }
 
 .fw-flex {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -11574,57 +11625,77 @@
   min-width: 0;
 }
 .fw-flex.fw-flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-column\@xs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-column\@s {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-column\@m {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-column\@l {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 .fw-flex.fw-flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-row\@xs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-row\@s {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-row\@m {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-row\@l {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
@@ -11686,197 +11757,232 @@
   }
 }
 .fw-flex.fw-flex-middle {
+  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-middle\@xs {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-middle\@s {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-middle\@m {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-middle\@l {
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 .fw-flex.fw-flex-top {
+  -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-top\@xs {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-top\@s {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-top\@m {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-top\@l {
+    -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }
 }
 .fw-flex.fw-flex-bottom {
+  -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-bottom\@xs {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-bottom\@s {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-bottom\@m {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-bottom\@l {
+    -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
 }
 .fw-flex.fw-flex-center {
+  -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-center\@xs {
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-center\@s {
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-center\@m {
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-center\@l {
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 }
 .fw-flex.fw-flex-left {
+  -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-left\@xs {
+    -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-left\@s {
+    -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-left\@m {
+    -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-left\@l {
+    -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 .fw-flex.fw-flex-right {
+  -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-right\@xs {
+    -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-right\@s {
+    -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-right\@m {
+    -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-right\@l {
+    -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 .fw-flex.fw-flex-space-between {
+  -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 @media screen and (min-width: 0) {
   .fw-flex.fw-flex-space-between\@xs {
+    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex.fw-flex-space-between\@s {
+    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex.fw-flex-space-between\@m {
+    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex.fw-flex-space-between\@l {
+    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
@@ -11938,29 +12044,34 @@
   }
 }
 .fw-flex .fw-flex-grow-1 {
+  -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-1\@xs {
+    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-1\@s {
+    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-1\@m {
+    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-1\@l {
+    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
   }
@@ -11994,29 +12105,34 @@
   }
 }
 .fw-flex .fw-flex-grow-2 {
+  -webkit-box-flex: 2;
   -ms-flex-positive: 2;
   flex-grow: 2;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-2\@xs {
+    -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-2\@s {
+    -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-2\@m {
+    -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-2\@l {
+    -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
   }
@@ -12050,29 +12166,34 @@
   }
 }
 .fw-flex .fw-flex-grow-3 {
+  -webkit-box-flex: 3;
   -ms-flex-positive: 3;
   flex-grow: 3;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-3\@xs {
+    -webkit-box-flex: 3;
     -ms-flex-positive: 3;
     flex-grow: 3;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-3\@s {
+    -webkit-box-flex: 3;
     -ms-flex-positive: 3;
     flex-grow: 3;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-3\@m {
+    -webkit-box-flex: 3;
     -ms-flex-positive: 3;
     flex-grow: 3;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-3\@l {
+    -webkit-box-flex: 3;
     -ms-flex-positive: 3;
     flex-grow: 3;
   }
@@ -12106,29 +12227,34 @@
   }
 }
 .fw-flex .fw-flex-grow-4 {
+  -webkit-box-flex: 4;
   -ms-flex-positive: 4;
   flex-grow: 4;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-4\@xs {
+    -webkit-box-flex: 4;
     -ms-flex-positive: 4;
     flex-grow: 4;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-4\@s {
+    -webkit-box-flex: 4;
     -ms-flex-positive: 4;
     flex-grow: 4;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-4\@m {
+    -webkit-box-flex: 4;
     -ms-flex-positive: 4;
     flex-grow: 4;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-4\@l {
+    -webkit-box-flex: 4;
     -ms-flex-positive: 4;
     flex-grow: 4;
   }
@@ -12162,29 +12288,34 @@
   }
 }
 .fw-flex .fw-flex-grow-5 {
+  -webkit-box-flex: 5;
   -ms-flex-positive: 5;
   flex-grow: 5;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-5\@xs {
+    -webkit-box-flex: 5;
     -ms-flex-positive: 5;
     flex-grow: 5;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-5\@s {
+    -webkit-box-flex: 5;
     -ms-flex-positive: 5;
     flex-grow: 5;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-5\@m {
+    -webkit-box-flex: 5;
     -ms-flex-positive: 5;
     flex-grow: 5;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-5\@l {
+    -webkit-box-flex: 5;
     -ms-flex-positive: 5;
     flex-grow: 5;
   }
@@ -12218,29 +12349,34 @@
   }
 }
 .fw-flex .fw-flex-grow-no {
+  -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
 }
 @media screen and (min-width: 0) {
   .fw-flex .fw-flex-grow-no\@xs {
+    -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
   }
 }
 @media screen and (min-width: 480px) {
   .fw-flex .fw-flex-grow-no\@s {
+    -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .fw-flex .fw-flex-grow-no\@m {
+    -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
   }
 }
 @media screen and (min-width: 1140px) {
   .fw-flex .fw-flex-grow-no\@l {
+    -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
   }
@@ -12498,29 +12634,50 @@
   }
 }
 
-.fw-font-merriweather {
-  font-family: "Merriweather", sans-serif;
+.fw-font-lato {
+  font-family: "Lato", sans-serif;
 }
 
-.fw-font-roboto {
-  font-family: "Roboto", sans-serif;
-}
-
-.fw-font-roboto-black {
-  font-family: "Roboto", sans-serif;
+.fw-font-lato-black {
+  font-family: "Lato Black", sans-serif;
   font-weight: 900;
 }
 
-.fw-font-roboto-condensed {
-  font-family: "Roboto Condensed", sans-serif;
+.fw-font-lato-hairline {
+  font-family: "Lato Hairline", sans-serif;
+  font-weight: 300;
 }
 
-.fw-font-gotham-pro {
-  font-family: "Gotham Pro", sans-serif;
+.fw-font-helvetica {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.fw-font-helvetica-condensed-bold {
+  font-family: "Helvetica Condensed", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fw-font-helvetica-condensed-black {
+  font-family: "Helvetica Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fw-font-thin {
+  font-weight: 100;
 }
 
 .fw-font-light {
   font-weight: 300;
+}
+
+.fw-font-heavy {
+  font-weight: 900;
+}
+
+.fw-font-normal {
+  font-weight: normal;
 }
 
 .fw-font-medium {
@@ -12672,6 +12829,7 @@
 }
 
 .fw-border-box {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -12721,32 +12879,415 @@
   clear: both;
 }
 
-.fw-float-left {
+.fw-text-left {
   float: left;
 }
 
-.fw-float-right {
+@media screen and (min-width: 0) {
+  .fw-text-left\@xs {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-left\@s {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-left\@m {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-left\@l {
+    float: left;
+  }
+}
+
+.fw-text-right {
   float: right;
 }
 
-.fw-text-uppercase {
-  text-transform: uppercase;
+@media screen and (min-width: 0) {
+  .fw-text-right\@xs {
+    float: right;
+  }
 }
 
-.fw-text-lowecase {
-  text-transform: lowercase;
+@media screen and (min-width: 480px) {
+  .fw-text-right\@s {
+    float: right;
+  }
 }
 
-.fw-text-capitalize {
-  text-transform: capitalize;
+@media screen and (min-width: 768px) {
+  .fw-text-right\@m {
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-right\@l {
+    float: right;
+  }
+}
+
+.fw-text-underline {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 0) {
+  .fw-text-underline\@xs {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-underline\@s {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-underline\@m {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-underline\@l {
+    text-decoration: underline;
+  }
+}
+
+.fw-text-underline-hover {
+  text-decoration: none;
+}
+.fw-text-underline-hover:hover {
+  text-decoration: underline;
+}
+
+.fw-text-underline-hover\@xs {
+  text-decoration: none;
+}
+@media screen and (min-width: 0) {
+  .fw-text-underline-hover\@xs:hover {
+    text-decoration: underline;
+  }
+}
+
+.fw-text-underline-hover\@s {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .fw-text-underline-hover\@s:hover {
+    text-decoration: underline;
+  }
+}
+
+.fw-text-underline-hover\@m {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .fw-text-underline-hover\@m:hover {
+    text-decoration: underline;
+  }
+}
+
+.fw-text-underline-hover\@l {
+  text-decoration: none;
+}
+@media screen and (min-width: 1140px) {
+  .fw-text-underline-hover\@l:hover {
+    text-decoration: underline;
+  }
 }
 
 .fw-text-line-through {
   text-decoration: line-through;
 }
 
-.fw-text-underline {
-  text-decoration: underline;
+@media screen and (min-width: 0) {
+  .fw-text-line-through\@xs {
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-line-through\@s {
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-line-through\@m {
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-line-through\@l {
+    text-decoration: line-through;
+  }
+}
+
+.fw-text-line-through-hover {
+  text-decoration: none;
+}
+.fw-text-line-through-hover:hover {
+  text-decoration: line-through;
+}
+
+.fw-text-line-through-hover\@xs {
+  text-decoration: none;
+}
+@media screen and (min-width: 0) {
+  .fw-text-line-through-hover\@xs:hover {
+    text-decoration: line-through;
+  }
+}
+
+.fw-text-line-through-hover\@s {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .fw-text-line-through-hover\@s:hover {
+    text-decoration: line-through;
+  }
+}
+
+.fw-text-line-through-hover\@m {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .fw-text-line-through-hover\@m:hover {
+    text-decoration: line-through;
+  }
+}
+
+.fw-text-line-through-hover\@l {
+  text-decoration: none;
+}
+@media screen and (min-width: 1140px) {
+  .fw-text-line-through-hover\@l:hover {
+    text-decoration: line-through;
+  }
+}
+
+.fw-text-capitalize {
+  text-decoration: capitalize;
+}
+
+@media screen and (min-width: 0) {
+  .fw-text-capitalize\@xs {
+    text-decoration: capitalize;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-capitalize\@s {
+    text-decoration: capitalize;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-capitalize\@m {
+    text-decoration: capitalize;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-capitalize\@l {
+    text-decoration: capitalize;
+  }
+}
+
+.fw-text-capitalize-hover {
+  text-decoration: none;
+}
+.fw-text-capitalize-hover:hover {
+  text-decoration: capitalize;
+}
+
+.fw-text-capitalize-hover\@xs {
+  text-decoration: none;
+}
+@media screen and (min-width: 0) {
+  .fw-text-capitalize-hover\@xs:hover {
+    text-decoration: capitalize;
+  }
+}
+
+.fw-text-capitalize-hover\@s {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .fw-text-capitalize-hover\@s:hover {
+    text-decoration: capitalize;
+  }
+}
+
+.fw-text-capitalize-hover\@m {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .fw-text-capitalize-hover\@m:hover {
+    text-decoration: capitalize;
+  }
+}
+
+.fw-text-capitalize-hover\@l {
+  text-decoration: none;
+}
+@media screen and (min-width: 1140px) {
+  .fw-text-capitalize-hover\@l:hover {
+    text-decoration: capitalize;
+  }
+}
+
+.fw-text-lowercase {
+  text-decoration: lowercase;
+}
+
+@media screen and (min-width: 0) {
+  .fw-text-lowercase\@xs {
+    text-decoration: lowercase;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-lowercase\@s {
+    text-decoration: lowercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-lowercase\@m {
+    text-decoration: lowercase;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-lowercase\@l {
+    text-decoration: lowercase;
+  }
+}
+
+.fw-text-lowercase-hover {
+  text-decoration: none;
+}
+.fw-text-lowercase-hover:hover {
+  text-decoration: lowercase;
+}
+
+.fw-text-lowercase-hover\@xs {
+  text-decoration: none;
+}
+@media screen and (min-width: 0) {
+  .fw-text-lowercase-hover\@xs:hover {
+    text-decoration: lowercase;
+  }
+}
+
+.fw-text-lowercase-hover\@s {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .fw-text-lowercase-hover\@s:hover {
+    text-decoration: lowercase;
+  }
+}
+
+.fw-text-lowercase-hover\@m {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .fw-text-lowercase-hover\@m:hover {
+    text-decoration: lowercase;
+  }
+}
+
+.fw-text-lowercase-hover\@l {
+  text-decoration: none;
+}
+@media screen and (min-width: 1140px) {
+  .fw-text-lowercase-hover\@l:hover {
+    text-decoration: lowercase;
+  }
+}
+
+.fw-text-uppercase {
+  text-decoration: uppercase;
+}
+
+@media screen and (min-width: 0) {
+  .fw-text-uppercase\@xs {
+    text-decoration: uppercase;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-text-uppercase\@s {
+    text-decoration: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-text-uppercase\@m {
+    text-decoration: uppercase;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-text-uppercase\@l {
+    text-decoration: uppercase;
+  }
+}
+
+.fw-text-uppercase-hover {
+  text-decoration: none;
+}
+.fw-text-uppercase-hover:hover {
+  text-decoration: uppercase;
+}
+
+.fw-text-uppercase-hover\@xs {
+  text-decoration: none;
+}
+@media screen and (min-width: 0) {
+  .fw-text-uppercase-hover\@xs:hover {
+    text-decoration: uppercase;
+  }
+}
+
+.fw-text-uppercase-hover\@s {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .fw-text-uppercase-hover\@s:hover {
+    text-decoration: uppercase;
+  }
+}
+
+.fw-text-uppercase-hover\@m {
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .fw-text-uppercase-hover\@m:hover {
+    text-decoration: uppercase;
+  }
+}
+
+.fw-text-uppercase-hover\@l {
+  text-decoration: none;
+}
+@media screen and (min-width: 1140px) {
+  .fw-text-uppercase-hover\@l:hover {
+    text-decoration: uppercase;
+  }
 }
 
 .fw-text-center {
@@ -12840,6 +13381,7 @@
 .fw-img-cover {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -12873,6 +13415,7 @@
 
 .fw-check-mark {
   position: relative;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -12934,7 +13477,7 @@ html, body {
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  min-width: 320px;
+  min-width: 1140px;
 }
 
 .container {
@@ -12942,6 +13485,7 @@ html, body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (min-width: 1140px) {

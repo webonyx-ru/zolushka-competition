@@ -1,30 +1,77 @@
-
 .fw-clearfix
   &::after
     display: block
     content: ''
     clear: both
 
-.fw-float-left
-  float: left
+@each $value in left, right
+  .fw-text-#{$value}
+    float: $value
 
-.fw-float-right
-  float: right
+  .fw-text-#{$value}\@xs
+    @media screen and (min-width: $extraSmall)
+      float: $value
 
-.fw-text-uppercase
-  text-transform: uppercase
+  .fw-text-#{$value}\@s
+    @media screen and (min-width: $small)
+      float: $value
 
-.fw-text-lowecase
-  text-transform: lowercase
+  .fw-text-#{$value}\@m
+    @media screen and (min-width: $medium)
+      float: $value
 
-.fw-text-capitalize
-  text-transform: capitalize
+  .fw-text-#{$value}\@l
+    @media screen and (min-width: $large)
+      float: $value
 
-.fw-text-line-through
-  text-decoration: line-through
+@each $value in underline, line-through, capitalize, lowercase, uppercase
+  .fw-text-#{$value}
+    text-decoration: $value
 
-.fw-text-underline
-  text-decoration: underline 
+  .fw-text-#{$value}\@xs
+    @media screen and (min-width: $extraSmall)
+      text-decoration: $value
+
+  .fw-text-#{$value}\@s
+    @media screen and (min-width: $small)
+      text-decoration: $value
+
+  .fw-text-#{$value}\@m
+    @media screen and (min-width: $medium)
+      text-decoration: $value
+
+  .fw-text-#{$value}\@l
+    @media screen and (min-width: $large)
+      text-decoration: $value
+
+  .fw-text-#{$value}-hover
+    text-decoration: none
+    &:hover
+      text-decoration: $value
+
+  .fw-text-#{$value}-hover\@xs
+    text-decoration: none
+    @media screen and (min-width: $extraSmall)
+      &:hover
+        text-decoration: $value
+
+  .fw-text-#{$value}-hover\@s
+    text-decoration: none
+    @media screen and (min-width: $small)
+      &:hover
+        text-decoration: $value
+
+  .fw-text-#{$value}-hover\@m
+    text-decoration: none
+    @media screen and (min-width: $medium)
+      &:hover
+        text-decoration: $value
+
+  .fw-text-#{$value}-hover\@l
+    text-decoration: none
+    @media screen and (min-width: $large)
+      &:hover
+        text-decoration: $value
 
 @each $value in center, left, right
   .fw-text-#{$value}
