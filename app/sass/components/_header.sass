@@ -1,0 +1,32 @@
+.header
+  width: 100%
+
+  &.header--fixed
+    background-color: transparent
+    position: fixed
+    left: 0
+    top: 0
+
+    .logo
+      +sprite(logo-white)
+
+  .logo
+    +sprite(logo-pink)
+
+  .header__panel
+    display: flex
+    align-items: center
+
+    > a
+      color: $colorWhite
+      font-weight: bold
+      font-size: 15px
+      text-decoration: none
+      
+      &:hover
+        text-decoration: underline
+
+      &:not(:first-child)
+        margin-left: 10px
+        padding-left: 10px
+        border-left: 2px solid $colorWhite

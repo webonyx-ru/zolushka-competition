@@ -2,5 +2,6 @@
 	display: inline-block
 	vertical-align: middle
 
-.icon-heart
-	+sprite(icon-heart)
+@each $value in heart, instagram-white, denim-logo
+	.icon-#{$value}
+		+sprite(icon-#{$value})

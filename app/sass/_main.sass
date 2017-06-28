@@ -46,6 +46,13 @@ hr
   font-weight: bold
   font-size: 14px
 
+  &.button-large
+    height: 66px
+
+  &.button-full
+    border-radius: 5px
+    width: 100%
+
   &:hover
     background-color: $colorBlueLight * .9
     border-color: $colorBlueLight * .9
@@ -57,6 +64,23 @@ hr
     &:hover
       background-color: $colorYellow * .9
       border-color: $colorYellow * .9
+
+  &.button-pink
+    color: $colorWhite
+    background: $colorPink
+    border-color: $colorPink
+
+    &:hover
+      background-color: $colorPink * .9
+      border-color: $colorPink * .9
+
+  &.button-white
+    background: $colorWhite
+    border-color: $colorWhite
+
+    &:hover
+      background-color: $colorWhite * .9
+      border-color: $colorWhite * .9
 
 .list-unstyled
   list-style: none

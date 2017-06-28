@@ -1,18 +1,6 @@
 @each $value in 1, 2, 3, 4
-  .fw-border-#{$value}
+  .fw-border-width-#{$value}
     border-width: #{$value}px
-
-  .fw-border-top-#{$value}
-    border-top-width: #{$value}px
-
-  .fw-border-bottom-#{$value}
-    border-bottom-width: #{$value}px
-
-  .fw-border-left-#{$value}
-    border-left-width: #{$value}px
-
-  .fw-border-right-#{$value}
-    border-right-width: #{$value}px
 
 @each $value in 5, 50
   .fw-border-radius-#{$value}
@@ -22,7 +10,7 @@
     border-radius: unquote("#{$value}%")
 
 
-@each $value in white_#{$colorWhite}, yellow_#{$colorYellow}, black_#{$colorBlack}, cyan_#{$colorCyan}, blue-light_#{$colorBlueLight}, grey-dark_#{$colorGreyDark}, pink_#{$colorPink}
+@each $value in white_#{$colorWhite}, yellow_#{$colorYellow}, black_#{$colorBlack}, grey_#{$colorGrey}, cyan_#{$colorCyan}, blue-light_#{$colorBlueLight}, grey-light_#{$colorGreyLight}, grey-dark_#{$colorGreyDark}, pink_#{$colorPink}, light_#{$colorLight}
   $values: str_split($value, '_')
   $color: nth($values, 2)
   $colorName: nth($values, 1)
@@ -33,13 +21,52 @@
 .fw-border-style-solid
   border-style: solid
 
+.fw-border-style-solid-top
+  border-style: solid none none none
+
+.fw-border-style-solid-left
+  border-style: none solid none none
+
+.fw-border-style-solid-bottom
+  border-style: none none solid none
+
+.fw-border-style-solid-right
+  border-style: none none none solid
+
 .fw-border-style-dashed
   border-style: dashed
+
+.fw-border-style-dashed-top
+  border-style: dashed none none none
+
+.fw-border-style-dashed-left
+  border-style: none dashed none none
+
+.fw-border-style-dashed-bottom
+  border-style: none none dashed none
+
+.fw-border-style-dashed-right
+  border-style: none none none dashed
 
 .fw-border-style-dotted
   border-style: dotted
 
+.fw-border-style-dotted-top
+  border-style: dotted none none none
+
+.fw-border-style-dotted-left
+  border-style: none dotted none none
+
+.fw-border-style-dotted-bottom
+  border-style: none none dotted none
+
+.fw-border-style-dotted-right
+  border-style: none none none dotted
+
 .fw-border-box
   box-sizing: border-box
+
+.fw-border-collapse
+  border-collapse: collapse
 
 
