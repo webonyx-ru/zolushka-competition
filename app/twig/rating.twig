@@ -1,0 +1,76 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    {% include 'layouts/header.twig' %}
+
+    <div class="fw-pt-50 fw-pb-60 fw-bg-cover fw-bg-no-repeat fw-bg-center fw-bg-color-light-dark">
+        <div class="container">
+            <div class="fw-mb-30">
+                <a href="#" class="fw-color-pink fw-text-underline-hover fw-fz-16 fw-flex fw-flex-inline fw-flex-middle"><i class="icon icon-bar-square fw-mr-5"></i>Все участницы</a>
+            </div>
+            <div class="fw-text-center fw-mt-20">
+                <p class="fw-mt-0 fw-mb-0 fw-fz-30 fw-font-futura-demic fw-text-uppercase">Текущий рейтинг участниц</p>
+            </div>
+            <table class="fw-width-1-1 fw-border-collapse fw-mt-50">
+                <thead>
+                <tr>
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20 fw-width-100">
+                        <p class="fw-font-bold fw-mt-0 fw-mb-20 fw-text-center">Место</p>
+                    </td>
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20">
+                        <p class="fw-font-bold fw-mt-0 fw-mb-20">Имя и возраст</p>
+                    </td>
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20">
+                        <p class="fw-font-bold fw-mt-0 fw-mb-20">Город</p>
+                    </td>
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-width-120">
+                        <p class="fw-font-bold fw-mt-0 fw-mb-20">Количество битв</p>
+                    </td>
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-width-100">
+                        <p class="fw-font-bold fw-mt-0 fw-mb-20 fw-text-center">Голосов</p>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key, val in 10..1 %}
+                    <tr>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-width-100 fw-va-middle">
+                            <p class="fw-mt-20 fw-mb-20 fw-text-center fw-fz-18">{{ key + 1 }}</p>
+                        </td>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-va-middle">
+                            <div class="fw-mt-20 fw-mb-20 fw-flex fw-flex-middle">
+                                <div class="fw-width-70 fw-height-70 fw-overflow-hidden fw-border-radius-percent-50 fw-inline-block fw-mr-15">
+                                    <img src="http://placehold.it/70x70" alt="">
+                                </div>
+                                <div class="fw-flex-grow-1">
+                                    <p class="fw-font-bold fw-mt-0 fw-mb-0 fw-fz-18">Золушка, {{ key + 1 }}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-va-middle">
+                            <p class="fw-mt-20 fw-mb-20 fw-fz-18">Нижний Новгород</p>
+                        </td>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-width-120 fw-va-middle">
+                            <p class="fw-mt-20 fw-mb-20 fw-fz-18">{{ val * 246 }}</p>
+                        </td>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-width-100 fw-va-middle">
+                            <p class="fw-font-bold fw-mt-20 fw-mb-20 fw-text-center fw-fz-18 fw-flex fw-flex-middle fw-flex-center"><i class="icon icon-heart fw-mr-5 fw-flex-shrink-no"></i> {{ val * 189 }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="fw-pb-50 fw-border-width-1 fw-border-color-grey-light fw-border-style-solid-bottom">
+            <div class="fw-grid fw-grid-30 fw-mt-60">
+                <div class="fw-width-1-2"><a href="#" class="button button-full button-large button-pink">Я ХОЧУ УЧАСТВОВАТЬ И СТАТЬ МИСС ЗОЛУШКА БИКИНИ</a></div>
+                <div class="fw-width-1-2"><a href="#" class="button button-full button-large"><span class="fw-color-white">Я ХОЧУ ГОЛОСОВАТЬ И ВЫИГРАТЬ BMW X6</span></a></div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+{% endblock %}
