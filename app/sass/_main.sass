@@ -8,6 +8,20 @@ hr
   opacity: 0.3
   background-color: $colorBlack
 
+input, textarea, select, option
+  border-radius: 3px
+  background-color: #ffffff
+  border: 1px solid $colorGreyLight
+  box-sizing: border-box
+  outline: none
+  font-family: 'Helvetica Neue', sans-serif
+
+input, select, option
+  height: 50px
+
+textarea
+  height: 150px
+
 .wrapper
   max-width: 100%
   width: 100%
@@ -28,9 +42,10 @@ hr
     padding: 0
 
 .button
+  cursor: pointer
   min-width: 205px
   display: inline-flex
-  height: 47px
+  height: 50px
   align-items: center
   justify-content: center
   box-sizing: border-box
@@ -47,7 +62,14 @@ hr
   font-size: 14px
 
   &.button-large
-    height: 66px
+    height: 65px
+
+  &.button-small
+    height: 36px
+    font-weight: normal
+    font-size: 16px
+    border-width: 1px
+    text-transform: none
 
   &.button-full
     border-radius: 5px
@@ -73,6 +95,16 @@ hr
     &:hover
       background-color: $colorPink * .9
       border-color: $colorPink * .9
+
+  &.button-pink-transparent
+    color: $colorPink
+    background: transparent
+    border-color: $colorPink
+
+    &:hover
+      background-color: transparent
+      border-color: $colorPink * .9
+      color: $colorPink  * .9
 
   &.button-white
     background: $colorWhite
