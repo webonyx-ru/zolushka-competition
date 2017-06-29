@@ -2,6 +2,10 @@
 	display: inline-block
 	vertical-align: middle
 
-@each $value in heart, instagram-white, denim-logo, for-adult-white, crown, list, lightning, external, twitter-circle, vk-circle, facebook-circle, instagram-circle, bar-square
+@each $value in heart, denim-logo, denim-logo-large, for-adult-white, crown, list, lightning, external, bar-square
+	.icon-#{$value}
+		+sprite(icon-#{$value})
+
+@each $value in instagram-white, twitter-circle, vk-circle, facebook-circle, instagram-circle, apple-pink, google-play-pink
 	.icon-#{$value}
 		+sprite(icon-#{$value})

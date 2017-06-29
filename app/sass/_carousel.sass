@@ -1,0 +1,62 @@
+#profile-carousel
+  position: relative
+
+  .owl-nav
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+    > div
+      width: 52px
+      height: 52px
+      margin-top: -9px
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 0
+      position: relative
+      transition: all .3s ease-in-out
+
+      &::before
+        display: block
+        content: ''
+        width: 28px
+        height: 2px
+        background-color: $colorPink
+        transition: all .3s ease-in-out
+
+      &:after
+        display: block
+        content: ''
+        border-top: 2px solid $colorPink
+        border-left: 2px solid $colorPink
+        transition: all .3s ease-in-out
+        width: 16px
+        height: 16px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+      &.owl-prev
+
+        &::after
+          left: 13px
+          transform: translateY(-50%) rotate(-45deg)
+
+      &.owl-next
+
+        &::after
+          right: 13px
+          transform: translateY(-50%) rotate(135deg)
+
+      &:hover
+        background-color: $colorPink
+
+        &::after
+          border-color: $colorWhite
+        &::before
+          background-color: $colorWhite
