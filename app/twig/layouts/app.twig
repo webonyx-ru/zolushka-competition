@@ -15,6 +15,48 @@
         {% block content %}{% endblock %}
     </div>
 
+    <div class="popup-wrapper js-popup" data-popup="authentication">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-70 fw-pr-70 fw-text-center fw-pb-10 fw-width-450">
+                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Авторизация</p>
+                <div class="fw-mt-30">
+                    <input type="text" placeholder="Эл.почта" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40">
+                </div>
+                <div class="fw-mt-10">
+                    <input type="password" placeholder="Пароль" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40">
+                </div>
+                <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
+                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Войти</span></button>
+                </div>
+                <div class="fw-text-center fw-mt-15">
+                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="password-forget" data-closing-popup="authentication">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrapper js-popup" data-popup="password-forget">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
+                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Восстановить пароль</p>
+                <p class="fw-fz-16 fw-mt-30 fw-mb-0 fw-font-bold">Вам будет отправлена ссылка для изменения пароля на эл. почту, указанную при регистрации</p>
+                <div class="fw-mt-30">
+                    <input type="text" placeholder="Эл.почта" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40">
+                </div>
+                <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
+                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Отправить</span></button>
+                </div>
+                <div class="fw-text-center fw-mt-15">
+                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="authentication" data-closing-popup="password-forget"> Вернуться назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block popups %}{% endblock %}
+
     <!-- Scripts -->
     {% include "scripts.twig" %}
 </body>

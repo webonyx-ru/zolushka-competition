@@ -65,7 +65,7 @@
                             <p class="fw-mt-20 fw-mb-0 fw-fz-16 fw-line-height-1-2">Сделай репост любой из записей +15 мест в рейтинге <a href="#" class="fw-color-pink fw-text-underline-hover">Выбрать запись</a></p>
                             <p class="fw-mt-20 fw-mb-0 fw-fz-16 fw-line-height-1-2">Поделись с друзьями новостью об участии в конкурсе +20 мест в рейтиге</p>
                             <div class="fw-width-150 fw-mt-15">
-                                <a href="#" class="button button-pink-transparent button-full button-small"><i class="icon icon-external fw-mr-5"></i> Поделиться</a>
+                                <a href="#" class="button button-pink-transparent button-full button-small js-open-popup" data-popup-target="share"><i class="icon icon-external fw-mr-5"></i> Поделиться</a>
                             </div>
                         </div>
                     </div>
@@ -113,4 +113,33 @@
     </div>
 
     {% include 'layouts/footer.twig' %}
+{% endblock %}
+
+{% block popups %}
+    <div class="popup-wrapper js-popup" data-popup="share">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-30 fw-pr-30 fw-width-550">
+                <div class="fw-width-1-1 fw-border-box fw-pl-20 fw-pr-20 fw-pb-30 fw-pt-20 fw-border-radius-5 fw-border-style-solid fw-border-width-1 fw-border-color-grey-light">
+                    <p class="fw-mt-0 fw-mb-0 fw-fz-16 fw-font-bold">Я учавствую в конкурсе Золушка в бикини</p>
+                    <div class="fw-width-1-1 fw-box-proportional-50 fw-mt-20">
+                        <div>
+                            <img src="http://placehold.it/550x250" alt="" class="fw-img-cover">
+                        </div>
+                    </div>
+                    <p class="fw-color-grey-dark fw-line-height-1-2 fw-mt-20 fw-mb-0">Правила этикета в театре и музее никто не отменял, но и не запрещал понимать их по-своему: предлагаем тебе свою версию советов по поведению на таких мероприятиях.</p>
+                    <p class="fw-fz-16 fw-font-bold fw-mt-30 fw-mb-0">Поделись этим в своей ленте</p>
+                    <div class="fw-mt-20">
+                        <a href="#" class="fw-mr-5"><i class="icon icon-twitter-circle"></i></a>
+                        <a href="#" class="fw-mr-5"><i class="icon icon-vk-circle"></i></a>
+                        <a href="#" class="fw-mr-5"><i class="icon icon-facebook-circle"></i></a>
+                        <a href="#"><i class="icon icon-instagram-circle"></i></a>
+                    </div>
+                </div>
+                <div class="fw-text-center fw-mt-30">
+                    <a href="#" class="fw-color-pink fw-fz-16 fw-text-none js-close-popup">Закрыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

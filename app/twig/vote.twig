@@ -1,0 +1,52 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    {% include 'layouts/header.twig' %}
+
+    <div class="vote-section fw-pt-50 fw-pb-60 fw-bg-cover fw-bg-no-repeat fw-bg-center fw-relative">
+        <div class="container">
+            <div class="vote-section__info fw-width-470 fw-text-center fw-absolute fw-absolute-center fw-mt-inverse-50">
+                <p class="fw-fz-60 fw-font-futura-demic fw-mt-0 fw-mb-0 fw-color-white  fw-text-uppercase">Кто горячее?</p>
+                <p class="fw-fz-20 fw-font-futura-demic fw-mt-20 fw-mb-0 fw-color-white fw-text-uppercase">Какую выберешь ты? Сегодня можно только одну!</p>
+            </div>
+            <div class="fw-grid fw-grid-30">
+                <div class="fw-width-1-2">
+                    <div class="vote-section__article fw-flex-fw-height-1-1 fw-width-1-1 fw-border-radius-10">
+                        <div class="fw-width-1-1 fw-box-proportional-100">
+                            <div class="fw-border-radius-10 fw-overflow-hidden">
+                                <img src="http://placehold.it/600x600" alt="" class="fw-img-cover">
+                            </div>
+                        </div>
+                        <div class="fw-pt-35 fw-pb-35 fw-pl-35 fw-pr-35 fw-border-box fw-flex fw-flex-middle">
+                            <div class="fw-flex-grow-1">
+                                <p class="fw-fz-30 fw-font-futura-demic fw-mt-0 fw-mb-0">Аня 23, Москва</p>
+                            </div>
+                            <div class="fw-flex-shrink-no">
+                                <a href="#" class="button button-pink"><i class="icon icon-heart-white fw-mr-10"></i>Голосовать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-width-1-2">
+                    <div class="vote-section__article fw-flex-fw-height-1-1 fw-width-1-1 fw-border-radius-10">
+                        <div class="fw-width-1-1 fw-box-proportional-100">
+                            <div class="fw-border-radius-10 fw-overflow-hidden">
+                                <img src="http://placehold.it/600x600" alt="" class="fw-img-cover">
+                            </div>
+                        </div>
+                        <div class="fw-pt-35 fw-pb-35 fw-pl-35 fw-pr-35 fw-border-box fw-flex fw-flex-middle">
+                            <div class="fw-flex-grow-1">
+                                <p class="fw-fz-30 fw-font-futura-demic fw-mt-0 fw-mb-0">Аня 23, Москва</p>
+                            </div>
+                            <div class="fw-flex-shrink-no">
+                                <a href="#" class="button button-green"><span class="fw-ml-inverse-15"><i class="icon icon-checkmark fw-mr-10"></i>Готово</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+{% endblock %}

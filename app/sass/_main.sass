@@ -11,7 +11,7 @@ hr
 input, textarea, select, option
   border-radius: 3px
   background-color: #ffffff
-  border: 1px solid $colorGreyLight
+  border: 1px solid #bad5d5
   box-sizing: border-box
   outline: none
   font-family: 'Helvetica Neue', sans-serif
@@ -76,16 +76,18 @@ textarea
     width: 100%
 
   &:hover
-    background-color: $colorBlueLight * .9
-    border-color: $colorBlueLight * .9
+    background-color: $colorBlueLight
+    border-color: $colorBlueLight
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorBlueLight, 0.4)
 
   &.button-yellow
     background: $colorYellow
     border-color: $colorYellow
 
     &:hover
-      background-color: $colorYellow * .9
-      border-color: $colorYellow * .9
+      background-color: $colorYellow
+      border-color: $colorYellow
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorYellow, 0.4)
 
   &.button-pink
     color: $colorWhite
@@ -93,8 +95,20 @@ textarea
     border-color: $colorPink
 
     &:hover
-      background-color: $colorPink * .9
-      border-color: $colorPink * .9
+      background-color: $colorPink
+      border-color: $colorPink
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
+
+
+  &.button-green
+    color: $colorWhite
+    background: $colorGreen
+    border-color: $colorGreen
+
+    &:hover
+      background-color: $colorGreen
+      border-color: $colorGreen
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorGreen, 0.4)
 
   &.button-pink-transparent
     color: $colorPink
@@ -103,16 +117,74 @@ textarea
 
     &:hover
       background-color: transparent
-      border-color: $colorPink * .9
-      color: $colorPink  * .9
+      border-color: $colorPink
+      color: $colorPink
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
 
   &.button-white
     background: $colorWhite
     border-color: $colorWhite
 
     &:hover
-      background-color: $colorWhite * .9
-      border-color: $colorWhite * .9
+      background-color: $colorWhite
+      border-color: $colorWhite
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorWhite, 0.4)
 
 .list-unstyled
   list-style: none
+  
+.vote-section
+  background-image: linear-gradient(to bottom, #443a91, #302772)
+
+  .vote-section__article
+    background-color: #fafafa
+    box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5)
+
+[data-info-title]
+  position: relative
+
+  &:after,
+  &:before
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    display: none
+    z-index: 1
+
+  &:after
+    content: attr(data-info-title)
+    align-items: center
+    justify-content: center
+    position: absolute
+    bottom: calc(100% + 10px)
+    box-sizing: border-box
+    padding: 5px 10px
+    color: $colorWhite
+    background-color: #2f2e2e
+
+
+  &::before
+    content: ''
+    bottom: 100%
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 7.5px 0 7.5px
+    border-color: #2f2e2e transparent transparent transparent
+
+  &:hover
+    &:after,
+    &:before
+      display: flex
+
+#image-drop-box
+  background-color: rgba(255, 255, 255, 0.4)
+  border: dashed 1px #90acb8
+
+  input
+    display: none
+    height: 0
+    border: none
+    width: 0
+    visibility: hidden
+

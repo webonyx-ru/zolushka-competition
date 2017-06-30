@@ -11,6 +11,9 @@
 @import "visibilities"
 @import "text"
 
+.fw-pointer
+  cursor: pointer
+
 .fw-va-middle
   vertical-align: middle
 
@@ -35,10 +38,19 @@
 .fw-inline
   display: inline
 
+.fw-relative
+  position: relative
+
 .fw-absolute
   position: absolute
 
-@each $value in 100, 135
+  &.fw-absolute-center
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    z-index: 2
+
+@each $value in 50, 100, 135
   .fw-box-proportional-#{$value}
     position: relative
 

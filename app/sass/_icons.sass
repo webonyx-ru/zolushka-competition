@@ -2,10 +2,24 @@
 	display: inline-block
 	vertical-align: middle
 
-@each $value in heart, heart-small, denim-logo, denim-logo-large, for-adult-white, crown, list, list-small, lightning, lightning-small, external, bar-square
+@each $value in heart, heart-small, heart-white, denim-logo, denim-logo-large, for-adult-white, crown, list, list-small, lightning, lightning-small, external, bar-square
 	.icon-#{$value}
 		+sprite(icon-#{$value})
 
-@each $value in instagram-white, twitter-circle, vk-circle, facebook-circle, instagram-circle, apple-pink, google-play-pink
+@each $value in instagram-white, twitter-circle, vk-circle, facebook-circle, instagram-circle, apple-pink, google-play-pink, camera, checkmark-large, close-large
 	.icon-#{$value}
 		+sprite(icon-#{$value})
+
+.icon-checkmark
+	width: 17px
+	height: 8px
+	transform: translateY(-50%) rotate(-45deg)
+	border-color: #fafafa
+	border-bottom: 2px solid
+	border-left: 2px solid
+
+.icon-pencil
+	+sprite(icon-pencil-grey)
+
+	&:hover
+		+sprite(icon-pencil-pink)

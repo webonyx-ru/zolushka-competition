@@ -229,6 +229,8 @@ var YOURAPPNAME = function () {
                 });
 
                 plugin.closePopupEl.on('click', function (e) {
+                    e.preventDefault();
+
                     var pop = void 0;
                     if (this.hasAttribute('data-popup-target')) {
                         pop = $(this).attr('data-popup-target');
@@ -285,6 +287,8 @@ var YOURAPPNAME = function () {
         console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
         // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+
+        app.popups();
 
         $('#profile-carousel').owlCarousel({
             loop: true,
