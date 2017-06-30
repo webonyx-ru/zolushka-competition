@@ -22,6 +22,152 @@ input, select, option
 textarea
   height: 150px
 
+.form-checkbox
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+  input
+    width: 0
+    height: 0
+    display: none
+
+  input:checked + .form-checkbox__box
+    border-color: $colorPink
+    background-color: $colorPink
+
+    &::before
+      border-color: $colorWhite
+
+  .form-checkbox__box
+    width: 18px
+    height: 18px
+    display: block
+    border: 1px solid #bad5d5
+    margin-right: 5px
+    position: relative
+    transition: all .3s ease-in-out
+    border-radius: 3px
+
+    &:before
+      display: block
+      content: ''
+      width: 11px
+      height: 6px
+      border-bottom: 2px solid
+      border-left: 2px solid
+      border-color: transparent
+      position: absolute
+      left: 50%
+      top: 50%
+      transition: all .3s ease-in-out
+      transform: translateY(-75%) translateX(-50%)  rotate(-45deg)
+
+.form-select-box
+  position: relative
+  background-color: $colorWhite
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
+  border: solid 1px #bad5d5
+  border-radius: 3px
+  width: 100%
+  height: 36px
+  box-sizing: border-box
+
+  &.active
+    > a
+      &::after
+        transform: translateY(-50%) rotate(180deg)
+
+
+    .form-select-box__list
+      visibility: visible
+      opacity: 1
+      transform: scale(1)
+
+  .form-select-box__list
+    position: absolute
+    top: calc(100% + 5px)
+    box-sizing: border-box
+    padding: 10px 0
+    left: 0
+    width: 100%
+    z-index: 2
+    background-color: $colorWhite
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
+    border: solid 1px #bad5d5
+    border-radius: 3px
+    visibility: hidden
+    opacity: 0
+    transform: scale(0.7)
+    transition: all .3s ease-in-out
+
+    > a
+      display: block
+      line-height: 26px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      box-sizing: border-box
+      padding: 0 15px 0 40px
+      position: relative
+      color: $colorBlack
+      text-decoration: none
+
+      &::before
+        display: block
+        opacity: 0
+        content: ''
+        left: 15px
+        top: 50%
+        position: absolute
+        width: 12px
+        height: 4px
+        margin-top: -3px
+        transform: translateY(-50%) rotate(-45deg)
+        border-color: #fafafa
+        border-bottom: 2px solid
+        border-left: 2px solid
+      
+      &.active,
+      &:hover
+        background-color: #e7edef
+
+      &.active
+        &::before
+          opacity: 1
+
+  select
+    height: 0
+    width: 0
+    visibility: hidden
+    border: none
+    opacity: 0
+
+  > a
+    display: flex
+    width: 100%
+    height: 100%
+    cursor: pointer
+    align-items: center
+    padding: 0 30px 0 15px
+    box-sizing: border-box
+    text-decoration: none
+    color: $colorBlack
+    position: relative
+
+    &::after
+      position: absolute
+      transition: all .3s ease-in-out
+      content: ''
+      display: block
+      right: 10px
+      top: 50%
+      transform: translateY(-50%)
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 8px 5px 0 5px
+      border-color: #bad5d5 transparent transparent transparent
+
 .wrapper
   max-width: 100%
   width: 100%
@@ -180,11 +326,88 @@ textarea
 #image-drop-box
   background-color: rgba(255, 255, 255, 0.4)
   border: dashed 1px #90acb8
+  position: relative
 
-  input
+  .preloader-wrapper
+    background-color: rgba($colorWhite, .7)
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    align-items: center
+    justify-content: center
+    z-index: 3
     display: none
-    height: 0
-    border: none
-    width: 0
-    visibility: hidden
 
+  &.image-drop-box-loading
+    .preloader-wrapper
+      display: flex
+
+  &.image-drop-box-has-file
+    .image-drop-box__content
+      display: none
+
+    .image-drop-box__preview
+      display: block
+
+  .image-drop-box__content
+    display: block
+    input
+      position: absolute
+      display: block
+      height: 100%
+      width: 100%
+      border: none
+      z-index: 1
+      top: 0
+      left: 0
+      opacity: 0
+
+    label
+      position: relative
+      z-index: 2
+
+  .image-drop-box__preview
+    position: relative
+    z-index: 2
+    display: none
+
+    &.preview
+      .preview__thumb
+        i
+          display: none
+
+        &:hover
+          img
+            filter: brightness(70%)
+          i
+            display: block
+
+.preloader
+  width: 35px
+  height: 35px
+  display: inline-block
+  padding: 0
+  border-radius: 100%
+  border: 2px solid
+  border-top-color: rgba(0, 0, 0, 0.65)
+  border-bottom-color: rgba(0, 0, 0, 0.15)
+  border-left-color: rgba(0, 0, 0, 0.65)
+  border-right-color: rgba(0, 0, 0, 0.15)
+  animation: preloader4 0.8s linear infinite
+
+@keyframes preloader4
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
+
+
+@-webkit-keyframes preloader4
+  from
+    -webkit-transform: rotate(0deg)
+
+  to
+    -webkit-transform: rotate(360deg)

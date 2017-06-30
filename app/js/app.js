@@ -261,6 +261,108 @@ var YOURAPPNAME = function () {
 
             return plugin;
         }
+    }, {
+        key: 'photosUpload',
+        value: function photosUpload() {
+            var $imageDropBox = $('#image-drop-box');
+
+            if ($imageDropBox.length) {
+                var imageList = [];
+                var imageFilesList = [];
+                var imageDropBoxLoadingClass = 'image-drop-box-loading';
+                var imageDropBoxHasFilesClass = 'image-drop-box-has-file';
+
+                var input = this.doc.getElementById('image-drop-box__files');
+
+                var showPreloader = function showPreloader() {
+                    $imageDropBox.addClass(imageDropBoxLoadingClass);
+                };
+
+                var hidePreloader = function hidePreloader() {
+                    setTimeout(function () {
+                        $imageDropBox.removeClass(imageDropBoxLoadingClass);
+                    }, 300);
+                };
+
+                var checkImageDropBox = function checkImageDropBox() {
+                    imageList.length ? $imageDropBox.addClass(imageDropBoxHasFilesClass) : $imageDropBox.removeClass(imageDropBoxHasFilesClass);
+                };
+
+                var renderTemplate = function renderTemplate(src, index) {
+                    return '<div class="fw-width-1-6 preview__item">' + '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' + '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' + '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' + '</div></div></div>';
+                };
+
+                var renderFiles = function renderFiles() {
+                    var $imagePreviewBox = $('#image-drop-box__preview');
+                    var templates = [];
+
+                    if (imageList.length) {
+                        for (var i = 0; i < imageList.length; i++) {
+                            var imageListSrc = imageList[i];
+
+                            templates.push(renderTemplate(imageListSrc, i));
+
+                            $imagePreviewBox.children().not(':last-child').remove();
+                            $imagePreviewBox.prepend(templates.join(''));
+                        }
+                    }
+                };
+
+                $(this.doc).on('click', '.preview__remove', function (e) {
+                    e.preventDefault();
+                    showPreloader();
+
+                    var $removeImage = $(this);
+                    var index = parseInt($removeImage.attr('href').replace('#', ''));
+
+                    if (index > 0) {
+                        imageList.splice(index, 1);
+                        imageFilesList.splice(index, 1);
+                    } else {
+                        imageList.shift();
+                        imageFilesList.shift();
+                    }
+                    checkImageDropBox();
+                    setTimeout(function () {
+                        renderFiles();
+                        hidePreloader();
+                        $removeImage.closest('.preview__item').remove();
+                    }, 300);
+                });
+
+                input.addEventListener('change', function () {
+                    var currentFiles = this.files;
+                    var currentFilesLength = currentFiles.length;
+
+                    if (currentFilesLength) {
+                        showPreloader();
+
+                        var _loop = function _loop(i) {
+                            var reader = new FileReader();
+
+                            reader.onload = function (e) {
+                                imageList.push(e.target.result);
+                                imageFilesList.push(currentFilesLength[i]);
+                                checkImageDropBox();
+
+                                if (i === currentFilesLength - 1) {
+                                    setTimeout(function () {
+                                        renderFiles();
+                                        hidePreloader();
+                                    }, 300);
+                                }
+                            };
+
+                            reader.readAsDataURL(currentFiles[i]);
+                        };
+
+                        for (var i = 0; i < currentFilesLength; i++) {
+                            _loop(i);
+                        }
+                    }
+                });
+            }
+        }
     }]);
 
     return YOURAPPNAME;
@@ -294,6 +396,51 @@ var YOURAPPNAME = function () {
             loop: true,
             nav: true,
             items: 1
+        });
+    });
+
+    app.photosUpload();
+
+    $('.form-select-box').each(function () {
+        var $selectBox = $(this);
+        var $select = $selectBox.find('select');
+        var $selectOptions = $select.find('option');
+        var $selectBoxHeader = $("<a href='#'></a>");
+        var $selectBoxList = $('<div class="form-select-box__list"></div>');
+
+        $selectOptions.each(function () {
+            var $option = $(this);
+            var $link = $("<a href='#'>" + $option.html() + "</a>");
+
+            if ($option.is(':selected')) {
+                $link.addClass('active');
+                $selectBoxHeader.html($option.html());
+            }
+
+            $link.appendTo($selectBoxList);
+
+            $link.click(function (e) {
+                e.preventDefault();
+
+                var $currentLink = $(this);
+                var $options = $currentLink.closest('.form-select-box').find('select').find('option');
+
+                $currentLink.siblings().removeClass('active');
+                $currentLink.addClass('active');
+                $selectBoxHeader.html($currentLink.html());
+                $options.attr('selected', false);
+                $currentLink.closest('.form-select-box').find('select').find('option').eq($currentLink.index()).attr('selected', true);
+                $selectBox.removeClass('active');
+            });
+        });
+
+        $selectBoxList.prependTo($selectBox);
+        $selectBoxHeader.prependTo($selectBox);
+
+        $selectBoxHeader.click(function (e) {
+            e.preventDefault();
+
+            $selectBox.hasClass('active') ? $selectBox.removeClass('active') : $selectBox.addClass('active');
         });
     });
 })();
