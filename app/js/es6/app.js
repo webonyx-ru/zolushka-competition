@@ -252,6 +252,7 @@ class YOURAPPNAME {
             const imageFilesList = [];
             const imageDropBoxLoadingClass = 'image-drop-box-loading';
             const imageDropBoxHasFilesClass = 'image-drop-box-has-file';
+            const imageDropBoxFullClass = 'image-drop-box-full';
 
             const input = this.doc.getElementById('image-drop-box__files');
 
@@ -262,6 +263,16 @@ class YOURAPPNAME {
             const hidePreloader = () => {
                 setTimeout(function () {
                     $imageDropBox.removeClass(imageDropBoxLoadingClass);
+
+                    $imageDropBox.find('.preview__count').html(15 - imageList.length);
+
+                    console.log(imageFilesList.length);
+
+                    if (imageFilesList.length === 15) {
+                        $imageDropBox.addClass(imageDropBoxFullClass);
+                    } else if (imageFilesList.length < 15) {
+                        $imageDropBox.removeClass(imageDropBoxFullClass);
+                    }
                 }, 300);
             };
 
@@ -323,22 +334,26 @@ class YOURAPPNAME {
                     showPreloader();
 
                     for(let i = 0; i < currentFilesLength; i++) {
-                        const reader = new FileReader();
 
-                        reader.onload = function (e) {
-                            imageList.push(e.target.result);
-                            imageFilesList.push(currentFilesLength[i]);
-                            checkImageDropBox();
+                        if(imageList.length <= 15) {
+                            const reader = new FileReader();
 
-                            if (i === currentFilesLength - 1) {
-                                setTimeout(function() {
-                                    renderFiles();
-                                    hidePreloader();
-                                }, 300);
-                            }
-                        };
+                            reader.onload = function (e) {
 
-                        reader.readAsDataURL(currentFiles[i]);
+                                    imageList.push(e.target.result);
+                                    imageFilesList.push(currentFilesLength[i]);
+                                    checkImageDropBox();
+
+                                    if (i === currentFilesLength - 1) {
+                                        setTimeout(function() {
+                                            renderFiles();
+                                            hidePreloader();
+                                        }, 300);
+                                    }
+                            };
+
+                            reader.readAsDataURL(currentFiles[i]);
+                        }
                     }
                 }
             });
@@ -369,12 +384,6 @@ class YOURAPPNAME {
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
 
         app.popups();
-
-        $('#profile-carousel').owlCarousel({
-            loop: true,
-            nav: true,
-            items: 1
-        });
     });
 
     app.photosUpload();
@@ -422,6 +431,36 @@ class YOURAPPNAME {
 
             ($selectBox.hasClass('active')) ? $selectBox.removeClass('active') : $selectBox.addClass('active');
         });
+
+        $(document).on('click', function (e) {
+            if(!$(e.target).closest('.form-select-box').length) {
+                $selectBox.removeClass('active');
+            }
+        });
+    });
+
+    $('.js-slide-questionnaire').click(function(e) {
+        e.preventDefault();
+
+        const memberQuestionnaireBlock = $('.member-questionnaire');
+        const memberQuestionnaireBlockContent = memberQuestionnaireBlock.find('.member-questionnaire__content');
+
+        if (memberQuestionnaireBlock.hasClass('active')) {
+            $(this).show();
+            memberQuestionnaireBlock.removeClass('active');
+            memberQuestionnaireBlockContent.slideUp(300);
+        } else {
+            $(this).hide();
+            memberQuestionnaireBlock.addClass('active');
+            memberQuestionnaireBlockContent.slideDown(300);
+        }
+    });
+
+
+    $('.js-photolist-trigger').click(function(e) {
+        e.preventDefault();
+
+        $('.photolist').addClass('photolist-full');
     });
 
 })();

@@ -21,6 +21,7 @@ input, select, option
 
 textarea
   height: 150px
+  resize: none
 
 .form-checkbox
   display: inline-flex
@@ -184,9 +185,6 @@ textarea
   padding: 0 15px
   box-sizing: border-box
 
-  @media screen and (min-width: 1140px)
-    padding: 0
-
 .button
   cursor: pointer
   min-width: 205px
@@ -220,6 +218,8 @@ textarea
   &.button-full
     border-radius: 5px
     width: 100%
+    max-width: 100%
+    min-width: 0
 
   &:hover
     background-color: $colorBlueLight
@@ -323,6 +323,26 @@ textarea
     &:before
       display: flex
 
+.photolist
+  &.photolist-full
+    > div
+      display: block
+      &:nth-last-child(1)
+        display: none
+
+
+  > div
+    display: none
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-last-child(1)
+      display: block
+
+
 #image-drop-box
   background-color: rgba(255, 255, 255, 0.4)
   border: dashed 1px #90acb8
@@ -339,6 +359,10 @@ textarea
     justify-content: center
     z-index: 3
     display: none
+
+  &.image-drop-box-full
+    .image-drop-box__selector
+      display: none
 
   &.image-drop-box-loading
     .preloader-wrapper
@@ -383,6 +407,76 @@ textarea
             filter: brightness(70%)
           i
             display: block
+
+.arrow
+  width: 52px
+  height: 52px
+  margin-top: -9px
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 0
+  position: relative
+  transition: all .3s ease-in-out
+
+  &::before
+    display: block
+    content: ''
+    width: 28px
+    height: 2px
+    background-color: $colorPink
+    transition: all .3s ease-in-out
+
+  &:after
+    display: block
+    content: ''
+    border-top: 2px solid $colorPink
+    border-left: 2px solid $colorPink
+    transition: all .3s ease-in-out
+    width: 16px
+    height: 16px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+  &.arrow-left
+    &::after
+      left: 13px
+      transform: translateY(-50%) rotate(-45deg)
+
+  &.arrow-right
+    &::after
+      right: 13px
+      transform: translateY(-50%) rotate(135deg)
+
+  &:hover
+    background-color: $colorPink
+
+    &::after
+      border-color: $colorWhite
+    &::before
+      background-color: $colorWhite
+
+.member-questionnaire
+  position: relative
+
+  .member-questionnaire__content
+    display: none
+
+  &::after
+    position: absolute
+    bottom: 0
+    display: block
+    content: ''
+    width: 100%
+    height: 76px
+    z-index: 1
+    background-image: linear-gradient(to bottom, rgba(231, 237, 239, 0), #e7edef)
+
+  &.active
+    &::after
+      display: none
 
 .preloader
   width: 35px

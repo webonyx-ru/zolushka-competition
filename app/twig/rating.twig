@@ -31,7 +31,7 @@
                     <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20 fw-width-100">
                         <p class="fw-font-bold fw-mt-0 fw-mb-20 fw-text-center">Место</p>
                     </td>
-                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20">
+                    <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20 fw-pl-85 fw-border-box">
                         <p class="fw-font-bold fw-mt-0 fw-mb-20">Имя и возраст</p>
                     </td>
                     <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-black fw-mr-20">
@@ -48,11 +48,11 @@
                 <tbody>
                 {% for key, val in 10..1 %}
                     <tr>
-                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-width-100 fw-va-middle">
-                            <p class="fw-mt-20 fw-mb-20 fw-text-center fw-fz-18">{{ key + 1 }}</p>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom {% if key == 9 %}fw-border-color-black{% else %}fw-border-color-grey-light{% endif %} fw-border-box fw-mr-20 fw-width-100 fw-va-middle">
+                            <p class="fw-mt-18 fw-mb-18 fw-text-center fw-fz-18">{{ key + 1 }}</p>
                         </td>
-                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-va-middle">
-                            <div class="fw-mt-20 fw-mb-20 fw-flex fw-flex-middle">
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom {% if key == 9 %}fw-border-color-black{% else %}fw-border-color-grey-light{% endif %} fw-border-box fw-mr-20 fw-va-middle">
+                            <div class="fw-mt-18 fw-mb-18 fw-flex fw-flex-middle">
                                 <div class="fw-width-70 fw-height-70 fw-overflow-hidden fw-border-radius-percent-50 fw-inline-block fw-mr-15">
                                     <img src="http://placehold.it/70x70" alt="">
                                 </div>
@@ -61,14 +61,14 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-mr-20 fw-va-middle">
-                            <p class="fw-mt-20 fw-mb-20 fw-fz-18">Нижний Новгород</p>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom {% if key == 9 %}fw-border-color-black{% else %}fw-border-color-grey-light{% endif %} fw-border-box fw-mr-20 fw-va-middle">
+                            <p class="fw-mt-18 fw-mb-18 fw-fz-18">Нижний Новгород</p>
                         </td>
-                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-width-120 fw-va-middle">
-                            <p class="fw-mt-20 fw-mb-20 fw-fz-18">{{ val * 246 }}</p>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom {% if key == 9 %}fw-border-color-black{% else %}fw-border-color-grey-light{% endif %} fw-border-box fw-width-120 fw-va-middle">
+                            <p class="fw-mt-18 fw-mb-18 fw-fz-18">{{ val * 246 }}</p>
                         </td>
-                        <td class="fw-border-width-1 fw-border-style-solid-bottom fw-border-color-grey-light fw-border-box fw-width-100 fw-va-middle">
-                            <p class="fw-font-bold fw-mt-20 fw-mb-20 fw-text-center fw-fz-18 fw-flex fw-flex-middle fw-flex-center"><i class="icon icon-heart fw-mr-5 fw-flex-shrink-no"></i> {{ val * 189 }}</p>
+                        <td class="fw-border-width-1 fw-border-style-solid-bottom {% if key == 9 %}fw-border-color-black{% else %}fw-border-color-grey-light{% endif %} fw-border-box fw-width-100 fw-va-middle">
+                            <p class="fw-font-bold fw-mt-18 fw-mb-18 fw-text-center fw-fz-18 fw-flex fw-flex-middle fw-flex-center"><i class="icon icon-heart fw-mr-5 fw-flex-shrink-no"></i> {{ val * 189 }}</p>
                         </td>
                     </tr>
                 {% endfor %}
