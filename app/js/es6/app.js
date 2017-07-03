@@ -456,6 +456,24 @@ class YOURAPPNAME {
         }
     });
 
+    $('.js-change-password-type').click(function(e) {
+        e.preventDefault();
+
+        const $changeBtn = $(this);
+        const $icon = $changeBtn.find('.icon');
+        const $input = $changeBtn.prev();
+
+        if($changeBtn.hasClass('active')) {
+            $icon.removeClass('icon-eye').addClass('icon-eye-dark');
+            $input.attr('type', 'password');
+            $changeBtn.removeClass('active');
+        } else {
+            $icon.removeClass('icon-eye-dark').addClass('icon-eye');
+            $input.attr('type', 'text');
+            $changeBtn.addClass('active');
+        }
+    });
+
 
     $('.js-photolist-trigger').click(function(e) {
         e.preventDefault();
