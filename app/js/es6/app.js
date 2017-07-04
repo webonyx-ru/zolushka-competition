@@ -429,11 +429,18 @@ class YOURAPPNAME {
         $selectBoxHeader.click(function (e) {
             e.preventDefault();
 
-            ($selectBox.hasClass('active')) ? $selectBox.removeClass('active') : $selectBox.addClass('active');
+            if ($selectBox.hasClass('active')) {
+                $selectBoxList.stop().slideUp(150);
+                $selectBox.removeClass('active')
+            } else {
+                $selectBoxList.stop().slideDown(200);
+                $selectBox.addClass('active');
+            }
         });
 
         $(document).on('click', function (e) {
             if(!$(e.target).closest('.form-select-box').length) {
+                $selectBox.find('.form-select-box__list').stop().slideUp(150);
                 $selectBox.removeClass('active');
             }
         });

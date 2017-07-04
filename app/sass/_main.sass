@@ -15,6 +15,10 @@ input, textarea, select, option
   box-sizing: border-box
   outline: none
   font-family: 'Helvetica Neue', sans-serif
+  transition: border-color .3s ease-in-out
+
+  &:focus
+    border-color: $colorPink
 
 input, select, option
   height: 50px
@@ -78,11 +82,10 @@ textarea
       &::after
         transform: translateY(-50%) rotate(180deg)
 
-
-    .form-select-box__list
-      visibility: visible
-      opacity: 1
-      transform: scale(1)
+    //
+    //.form-select-box__list
+    //  max-height: 200px
+    //  //transform: scale(1)
 
   .form-select-box__list
     position: absolute
@@ -96,10 +99,8 @@ textarea
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
     border: solid 1px #bad5d5
     border-radius: 3px
-    visibility: hidden
-    opacity: 0
-    transform: scale(0.7)
-    transition: all .3s ease-in-out
+    display: none
+    //transform: scale(0.7)
 
     > a
       display: block
@@ -179,7 +180,7 @@ textarea
   min-height: 100vh
 
 .container
-  max-width: 1160px
+  max-width: 1140px
   width: 100%
   margin: 0 auto
   padding: 0 15px
@@ -204,6 +205,7 @@ textarea
   outline: none
   font-weight: bold
   font-size: 14px
+  text-align: center
 
   &.button-large
     height: 65px
@@ -505,3 +507,23 @@ textarea
 
   to
     -webkit-transform: rotate(360deg)
+
+.footer-socials
+  @media screen and (max-width: 1239px)
+    flex-wrap: wrap
+    justify-content: flex-end
+    margin-top: 10px
+
+    > a
+      margin: 5px 0
+      flex-shrink: 0
+
+.main-info-form-box
+  > input:focus + span > i
+    +sprite(icon-pencil-pink)
+
+.additional-info-form-box
+  flex-direction: row-reverse
+
+  > textarea:focus + p
+    color: $colorPink
