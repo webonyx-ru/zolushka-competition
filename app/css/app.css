@@ -232,6 +232,19 @@
   box-shadow: inset 0 -70px 120px -10px #efefef;
 }
 
+.fw-bg-color-very-light-grey {
+  background-color: #fafafa;
+}
+
+.fw-color-very-light-grey {
+  color: #fafafa;
+}
+
+.fw-shadow-bottom-very-light-grey {
+  -webkit-box-shadow: inset 0 -70px 120px -10px #fafafa;
+  box-shadow: inset 0 -70px 120px -10px #fafafa;
+}
+
 .fw-bg-color-grey-darker {
   background-color: rgba(213, 213, 213, 0.1);
 }
@@ -2529,6 +2542,11 @@
   -ms-flex-positive: 0;
   flex-grow: 0;
 }
+.fw-flex.fw-flex-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
 
 .fw-fz-12 {
   font-size: 12px;
@@ -3930,6 +3948,9 @@ textarea {
   font-size: 14px;
   text-align: center;
 }
+.button > * {
+  margin: auto;
+}
 .button.button-large {
   height: 65px;
 }
@@ -4014,6 +4035,16 @@ textarea {
 .vote-section {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#443a91), to(#302772));
   background-image: linear-gradient(to bottom, #443a91, #302772);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.vote-section .container {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .vote-section .vote-section__article {
   background-color: #fafafa;
@@ -4074,6 +4105,35 @@ textarea {
 }
 .photolist > div:nth-child(1), .photolist > div:nth-child(2), .photolist > div:nth-child(3), .photolist > div:nth-child(4), .photolist > div:nth-child(5), .photolist > div:nth-last-child(1) {
   display: block;
+}
+.photolist .fw-bg-color-blue {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.photolist .fw-bg-color-blue:hover {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+
+.photolist__item {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.photolist__item:hover {
+  -webkit-box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #999;
+}
+.photolist__item.visiblity-true {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 #image-drop-box {
@@ -4297,12 +4357,6 @@ textarea {
   }
 }
 
-.additional-info-form-box {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
 .additional-info-form-box > textarea:focus + p {
   color: #f90369;
 }

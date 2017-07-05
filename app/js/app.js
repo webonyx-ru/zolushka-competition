@@ -505,5 +505,16 @@ var YOURAPPNAME = function () {
         e.preventDefault();
 
         $('.photolist').addClass('photolist-full');
+
+        var timeout = 0;
+
+        $('.photolist .photolist__item:not(.visiblity-true)').each(function () {
+            var $this = $(this);
+            setTimeout(function () {
+                $this.addClass('visiblity-true');
+            }, timeout);
+
+            timeout += 200;
+        });
     });
 })();

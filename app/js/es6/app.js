@@ -486,6 +486,17 @@ class YOURAPPNAME {
         e.preventDefault();
 
         $('.photolist').addClass('photolist-full');
+
+        let timeout = 0;
+
+        $('.photolist .photolist__item:not(.visiblity-true)').each(function () {
+            const $this = $(this);
+            setTimeout(function () {
+                $this.addClass('visiblity-true');
+            }, timeout);
+
+            timeout += 200;
+        });
     });
 
 })();
