@@ -188,7 +188,7 @@ textarea
 
 .index-first-screen
   background: linear-gradient(rgba(#fff, 0.1) 90%, rgba(#fff, 1)), url('../images/pages/index/bg.jpg') no-repeat center top / cover
-  min-height: 640px
+  min-height: 690px
   margin-bottom: -50px
 
 .button
@@ -301,6 +301,28 @@ textarea
   .vote-section__article
     background-color: #fafafa
     box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5)
+    transform-style: preserve-3d
+  
+    &.transition
+      transition: all 1s cubic-bezier(0.19, 0.4, 0.26, 1.13)
+    
+    &.animate-flip
+      transform: rotateX(360deg)
+      
+.vote-trigger__button
+  & > *
+    margin: auto
+    display: none
+    
+    &:first-child
+      display: flex
+      
+  &.active
+    & > *
+      display: none
+      
+      &:last-child
+        display: flex
 
 [data-info-title]
   position: relative

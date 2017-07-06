@@ -359,6 +359,36 @@ class YOURAPPNAME {
             });
         }
     };
+
+    voteTrigger() {
+        const $voteItems = $('.js-vote-item');
+        $('.js-vote-trigger').on('click', function (e) {
+            e.preventDefault();
+            const $this = $(this);
+
+            $this.addClass('active');
+
+            $voteItems.addClass('transition');
+
+            setTimeout(function (e) {
+                $this.removeClass('active');
+                let $timeout = 0;
+                $voteItems.each(function () {
+                    const $voteItem = $(this);
+                    setTimeout(function () {
+
+                        $voteItem.addClass('animate-flip');
+
+                        setTimeout(function () {
+                            $voteItem.removeClass('animate-flip transition');
+                        }, 1050);
+                    }, $timeout);
+                    $timeout += 300;
+                })
+
+            }, 500);
+        });
+    }
 }
 
 (function() {
@@ -384,6 +414,7 @@ class YOURAPPNAME {
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
 
         app.popups();
+        app.voteTrigger();
     });
 
     app.photosUpload();
