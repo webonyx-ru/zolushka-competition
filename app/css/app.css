@@ -3918,6 +3918,13 @@ textarea {
   box-sizing: border-box;
 }
 
+.index-first-screen {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, rgba(255, 255, 255, 0.1)), to(white)), url("../images/pages/index/bg.jpg") no-repeat center top/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 90%, white), url("../images/pages/index/bg.jpg") no-repeat center top/cover;
+  min-height: 640px;
+  margin-bottom: -50px;
+}
+
 .button {
   cursor: pointer;
   min-width: 205px;
