@@ -4,6 +4,12 @@
 
   &.header--transparent
     background-color: transparent
+    
+    .header__partners
+      background-color: rgba(#fff, 0.12)
+      
+      &:hover
+        background-color: rgba(#fff, 0.3)
 
     .logo
       +sprite(logo-white)
@@ -31,3 +37,13 @@
         margin-left: 10px
         padding-left: 10px
         border-left: 2px solid $colorWhite
+        
+.header__partners
+  background-color: rgba(#000, 0.12)
+  padding: 5px 10px
+  border-radius: 5px
+  font-size: 15px
+  text-decoration: none
+  
+  &:hover
+    background-color: rgba(#000, 0.3)

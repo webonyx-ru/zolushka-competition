@@ -522,11 +522,11 @@ var YOURAPPNAME = function () {
         var $input = $changeBtn.prev();
 
         if ($changeBtn.hasClass('active')) {
-            $icon.removeClass('icon-eye').addClass('icon-eye-dark');
+            $icon.removeClass('icon-eye-dark').addClass('icon-eye');
             $input.attr('type', 'password');
             $changeBtn.removeClass('active');
         } else {
-            $icon.removeClass('icon-eye-dark').addClass('icon-eye');
+            $icon.removeClass('icon-eye').addClass('icon-eye-dark');
             $input.attr('type', 'text');
             $changeBtn.addClass('active');
         }

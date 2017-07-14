@@ -3,45 +3,58 @@
 {% block content %}
     {% include 'layouts/header.twig' %}
 
-    <div class="fw-pt-40 fw-pb-40 fw-bg-cover fw-bg-no-repeat fw-bg-center" style="background-image: url('images/pages/about/bg.jpg')">
+    <div class="fw-pt-40 fw-pb-40 fw-bg-cover fw-bg-no-repeat fw-bg-center"
+         style="background-image: url('images/pages/about/bg.jpg')">
         <div class="container">
             <div class="fw-width-640 fw-ml-60">
-                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Всё, что нужно знать о конкурсе</p>
+                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Всё, что нужно знать о
+                    конкурсе</p>
                 <p class="fw-fz-24 fw-font-futura-demic fw-mt-20 fw-mb-0">Правила конкурса</p>
                 <div class="fw-flex fw-flex-column fw-mt-40">
                     <div class="fw-flex fw-flex-middle">
                         <div class="fw-flex-shrink-no fw-mr-20">
                             <div class="fw-height-32 fw-width-32 fw-border-radius-percent-50 fw-overflow-hidden fw-bg-color-white">
-                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">1</p>
+                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">
+                                    1</p>
                             </div>
                         </div>
                         <div class="fw-flex-grow-1">
-                            <p class="fw-line-height-1-2 fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">Скачай и установи приложение от спонсора конкурса — сервиса <a href="#" class="fw-color-pink fw-text-underline-hover">Denim</a></p>
+                            <div class="fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">
+                                Установи приложение от спонсора конкурса —
+                                <a href="#" class="fw-color-pink fw-text-underline-hover">Denim</a>
+                                <a href="#" class="button button-very-small button-pink">Установить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="fw-flex fw-flex-middle fw-mt-20">
                         <div class="fw-flex-shrink-no fw-mr-20">
                             <div class="fw-height-32 fw-width-32 fw-border-radius-percent-50 fw-overflow-hidden fw-bg-color-white">
-                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle  fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">2</p>
+                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle  fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">
+                                    2</p>
                             </div>
                         </div>
                         <div class="fw-flex-grow-1">
-                            <p class="fw-line-height-1-2 fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">Пройди регистрацию в приложении, указав реальную информацию о себе — эти данные будут использованы в твоей анкете на сайте конкурса.</p>
+                            <p class="fw-line-height-1-2 fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">Пройди регистрацию
+                                в приложении, указав реальную информацию о себе — эти данные будут использованы в твоей
+                                анкете на сайте конкурса.</p>
                         </div>
                     </div>
                     <div class="fw-flex fw-flex-middle fw-mt-20">
                         <div class="fw-flex-shrink-no fw-mr-20">
                             <div class="fw-height-32 fw-width-32 fw-border-radius-percent-50 fw-overflow-hidden fw-bg-color-white">
-                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle  fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">3</p>
+                                <p class="fw-width-1-1 fw-height-1-1 fw-flex fw-flex-center fw-flex-middle  fw-font-futura-demic fw-color-pink fw-mt-0 fw-mb-0 fw-fz-24">
+                                    3</p>
                             </div>
                         </div>
                         <div class="fw-flex-grow-1">
-                            <p class="fw-line-height-1-2 fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">Получи уникальный код участницы конкурса и введи его в поле ниже:</p>
+                            <p class="fw-line-height-1-2 fw-mt-0 fw-mb-0 fw-fz-16 fw-line-height-1-4">Получи уникальный
+                                код участницы конкурса и введи его в поле ниже:</p>
                         </div>
                     </div>
                 </div>
                 <form class="fw-flex fw-flex-middle fw-mt-40" action="">
-                    <div class="fw-width-330 fw-mr-15"><input type="text" placeholder="Введи уникальный код участницы" class="fw-width-1-1 fw-pl-15 fw-pr-15"></div>
+                    <div class="fw-width-330 fw-mr-15"><input type="text" placeholder="Введи уникальный код участницы"
+                                                              class="fw-width-1-1 fw-pl-15 fw-pr-15"></div>
                     <div class="fw-flex-shrink-0 fw-border-radius-5 fw-width-200">
                         <button class="button button-pink button-full">
                             <span>Продолжить</span>
@@ -49,7 +62,9 @@
                     </div>
                 </form>
                 <p class="fw-mt-15 fw-font-bold fw-mb-0">Не знаешь, где найти код участницы? Смотри шаг №1! </p>
-                <p class="fw-color-grey fw-mt-15 fw-mb-0 fw-line-height-1-4">После ввода кода участницы тебе останется только загрузить фото и ответить на несколько вопросов о себе, после чего ты сразу же получишь шанс выиграть путевку на двоих в незабываемое романтическое путешествие и другие призы! </p>
+                <p class="fw-color-grey fw-mt-15 fw-mb-0 fw-line-height-1-4">После ввода кода участницы тебе останется
+                    только загрузить фото и ответить на несколько вопросов о себе, после чего ты сразу же получишь шанс
+                    выиграть путевку на двоих в незабываемое романтическое путешествие и другие призы! </p>
             </div>
         </div>
     </div>
@@ -62,21 +77,29 @@
                     <div class="fw-mt-25">
                         <p class="fw-font-bold fw-mt-0 fw-mb-0">1. Я хочу победить. Что нужно сделать?</p>
                         <div class="fw-color-grey fw-line-height-1-4">
-                            <p>Для начала скачай и установи приложение от спонсора конкурса – сервиса Denim. Затем пройди регистрацию, указав реальную информацию о себе, отправь свои фото в бикинии через форму и следи за ходом конкурса в своем профиле на сайте.</p>
-                            <p>Увеличь свои шансы на успех – подписывайся на Denim в одной из социальных сетей и делись с друзьями информацией о конкурсе. </p>
+                            <p>Для начала скачай и установи приложение от спонсора конкурса – сервиса Denim. Затем
+                                пройди регистрацию, указав реальную информацию о себе, отправь свои фото в бикинии через
+                                форму и следи за ходом конкурса в своем профиле на сайте.</p>
+                            <p>Увеличь свои шансы на успех – подписывайся на Denim в одной из социальных сетей и делись
+                                с друзьями информацией о конкурсе. </p>
                         </div>
                     </div>
                     <div class="fw-mt-25">
                         <p class="fw-font-bold fw-mt-0 fw-mb-0">2. Как будет проходить голосование?</p>
                         <div class="fw-color-grey fw-line-height-1-4">
-                            <p>Пользователи сервиса Denim, имеющие премиум-аккаунт, оценивают девушек на специальной странице конкурса в соответствии со специальным алгоритмом обработки фото.</p>
+                            <p>Пользователи сервиса Denim, имеющие премиум-аккаунт, оценивают девушек на специальной
+                                странице конкурса в соответствии со специальным алгоритмом обработки фото.</p>
                         </div>
                     </div>
                     <div class="fw-mt-25">
                         <p class="fw-font-bold fw-mt-0 fw-mb-0">3. Что такое Denim?</p>
                         <div class="fw-color-grey fw-line-height-1-4">
-                            <p>DENIM от сервиса «Золушка Project» — это уже зарекомендовавший себя дейтинг для по-настоящему красивых девушек, ищущих успешных мужчин, которые хотят тратить деньги на достойные подарки.</p>
-                            <p>Знакомства без обязательств для красивых девушек и успешных мужчин стали максимально быстрыми и удобными благодаря строгой модерации женщин, а также так называемой «клубной» системе для представителей сильного пола – доступ для мужчин к сервису платный. </p>
+                            <p>DENIM от сервиса «Золушка Project» — это уже зарекомендовавший себя дейтинг для
+                                по-настоящему красивых девушек, ищущих успешных мужчин, которые хотят тратить деньги на
+                                достойные подарки.</p>
+                            <p>Знакомства без обязательств для красивых девушек и успешных мужчин стали максимально
+                                быстрыми и удобными благодаря строгой модерации женщин, а также так называемой «клубной»
+                                системе для представителей сильного пола – доступ для мужчин к сервису платный. </p>
                         </div>
                     </div>
                 </div>
