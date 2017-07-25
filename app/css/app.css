@@ -3758,6 +3758,11 @@ input, textarea, select, option {
 input:focus, textarea:focus, select:focus, option:focus {
   border-color: #f90369;
 }
+input.error-field, textarea.error-field, select.error-field, option.error-field {
+  border-color: #f90369;
+  -webkit-box-shadow: 0 0 5px #f90369;
+  box-shadow: 0 0 5px #f90369;
+}
 
 input, select, option {
   height: 50px;
