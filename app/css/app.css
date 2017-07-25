@@ -3052,6 +3052,12 @@
   left: 0;
 }
 
+.fw-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .icon {
   display: inline-block;
   vertical-align: middle;
