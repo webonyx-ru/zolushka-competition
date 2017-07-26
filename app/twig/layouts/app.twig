@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block pageTitle %}{% endblock %}</title>
 
@@ -10,76 +11,128 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Block content -->
-        {% block content %}{% endblock %}
-    </div>
+<div class="wrapper">
+    <!-- Block content -->
+    {% block content %}{% endblock %}
+</div>
 
-    <div class="popup-wrapper js-popup" data-popup="authentication">
-        <div class="popup">
-            <a href="#" class="popup__close js-close-popup"></a>
-            <div class="fw-border-box fw-pl-70 fw-pr-70 fw-text-center fw-pb-10 fw-width-450">
-                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Авторизация</p>
-                <p class="fw-mt-15 fw-mb-inverse-15 fw-line-height-1-4">Используйте Ваш логин и пароль <br>от приложения Denim</p>
-                <div class="fw-mt-30">
-                    <input type="text" placeholder="Эл.почта" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-border-box fw-pl-10 fw-pr-10">
-                </div>
-                <div class="fw-mt-10 fw-relative">
-                    <input type="password" placeholder="Пароль" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-pl-42 fw-pr-42 fw-border-box">
-                    <a href="#" class="fw-absolute fw-absolute-center-right fw-mr-10 js-change-password-type"><i class="icon icon-eye"></i></a>
-                </div>
-                <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
-                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Войти</span></button>
-                </div>
-                <div class="fw-text-center fw-mt-15">
-                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="password-forget" data-closing-popup="authentication"><span>Забыли пароль?</span></a>
-                </div>
+<div class="popup-wrapper js-popup" data-popup="authentication">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-70 fw-pr-70 fw-text-center fw-pb-10 fw-width-450">
+            <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Авторизация</p>
+            <p class="fw-mt-15 fw-mb-inverse-15 fw-line-height-1-4">Используйте Ваш логин и пароль <br>от приложения
+                Denim</p>
+            <div class="fw-mt-30">
+                <input type="text" placeholder="Эл.почта"
+                       class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-border-box fw-pl-10 fw-pr-10">
+            </div>
+            <div class="fw-mt-10 fw-relative">
+                <input type="password" placeholder="Пароль"
+                       class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-pl-42 fw-pr-42 fw-border-box">
+                <a href="#" class="fw-absolute fw-absolute-center-right fw-mr-10 js-change-password-type"><i
+                            class="icon icon-eye"></i></a>
+            </div>
+            <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
+                <button type="submit" class="button button-full button-pink"><span
+                            class="fw-text-capitalize">Войти</span></button>
+            </div>
+            <div class="fw-text-center fw-mt-15">
+                <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup"
+                   data-opening-popup="password-forget" data-closing-popup="authentication"><span>Забыли пароль?</span></a>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="popup-wrapper js-popup" data-popup="confirmation">
-        <div class="popup">
-            <a href="#" class="popup__close js-close-popup"></a>
-            <div class="fw-border-box fw-pl-20 fw-pr-20 fw-text-center fw-pb-10 fw-width-450">
-                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Подтверждение участия</p>
-                <p class="fw-mt-15 fw-line-height-1-4">Для продолжения введите ваш код участника, <br> оправленный на номер +7(925)***-**-21</p>
-                <div class="fw-mt-10 fw-relative fw-ml-70 fw-mr-70">
-                    <input type="password" placeholder="Введите код из SMS" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-pl-42 fw-pr-42 fw-border-box">
-                    <a href="#" class="fw-absolute fw-absolute-center-right fw-mr-10 js-change-password-type"><i class="icon icon-eye"></i></a>
-                </div>
-                <div class="fw-mt-15 fw-width-200 fw-mr-auto fw-ml-auto">
-                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Подтвердить</span></button>
-                </div>
-                <div class="fw-text-center fw-mt-15">
-                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="password-forget" data-closing-popup="authentication"><span>Выслать код повторно?</span></a>
-                </div>
+<div class="popup-wrapper js-popup" data-popup="confirmation">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-20 fw-pr-20 fw-text-center fw-pb-10 fw-width-450">
+            <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Подтверждение участия</p>
+            <p class="fw-mt-15 fw-line-height-1-4">Для продолжения введите ваш код участника, <br> оправленный на номер
+                +7(925)***-**-21</p>
+            <div class="fw-mt-10 fw-relative fw-ml-70 fw-mr-70">
+                <input type="password" placeholder="Введите код из SMS"
+                       class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-pl-42 fw-pr-42 fw-border-box">
+                <a href="#" class="fw-absolute fw-absolute-center-right fw-mr-10 js-change-password-type"><i
+                            class="icon icon-eye"></i></a>
+            </div>
+            <div class="fw-mt-15 fw-width-200 fw-mr-auto fw-ml-auto">
+                <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Подтвердить</span>
+                </button>
+            </div>
+            <div class="fw-text-center fw-mt-15">
+                <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup"
+                   data-opening-popup="password-forget"
+                   data-closing-popup="authentication"><span>Выслать код повторно?</span></a>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="popup-wrapper js-popup" data-popup="password-forget">
-        <div class="popup">
-            <a href="#" class="popup__close js-close-popup"></a>
-            <div class="fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
-                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Восстановить пароль</p>
-                <p class="fw-fz-16 fw-mt-30 fw-mb-0 fw-font-bold">Вам будет отправлена ссылка для изменения пароля на эл. почту, указанную при регистрации</p>
-                <div class="fw-mt-30">
-                    <input type="text" placeholder="Эл.почта" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40">
-                </div>
-                <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
-                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Отправить</span></button>
-                </div>
-                <div class="fw-text-center fw-mt-15">
-                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="authentication" data-closing-popup="password-forget"> Вернуться назад</a>
-                </div>
+<div class="popup-wrapper js-popup" data-popup="password-forget">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
+            <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Восстановить пароль</p>
+            <p class="fw-fz-16 fw-mt-30 fw-mb-0 fw-font-bold">Вам будет отправлена ссылка для изменения пароля на эл.
+                почту, указанную при регистрации</p>
+            <div class="fw-mt-30">
+                <input type="text" placeholder="Эл.почта"
+                       class="fw-color-black fw-text-center fw-width-1-1 fw-height-40">
+            </div>
+            <div class="fw-mt-30 fw-width-200 fw-mr-auto fw-ml-auto">
+                <button type="submit" class="button button-full button-pink"><span
+                            class="fw-text-capitalize">Отправить</span></button>
+            </div>
+            <div class="fw-text-center fw-mt-15">
+                <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup"
+                   data-opening-popup="authentication" data-closing-popup="password-forget"> Вернуться назад</a>
             </div>
         </div>
     </div>
+</div>
 
-    {% block popups %}{% endblock %}
+<div class="popup-wrapper js-popup" data-popup="woman-info">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
+            <div>
+                <i class="icon icon-woman-question"></i>
+            </div>
+            <p class="fw-fz-16 fw-mt-30 fw-mb-0 fw-line-height-1-5">Обращаем внимание, что к голосованию допускаются только
+                мужчины, подтвердившие свой финансовый статус в приложении Denim и имеющие активный премиум-доступ.</p>
+            <div class="fw-mt-30 fw-text-center fw-fz-16">
+                <a href="#" class="js-close-popup fw-color-pink fw-text-underline-hover">Понятно</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Scripts -->
-    {% include "scripts.twig" %}
+<div class="popup-wrapper js-popup opened" data-popup="man-info">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
+            <div>
+                <i class="icon icon-man-question"></i>
+            </div>
+            <p class="fw-fz-16 fw-mt-30 fw-mb-0 fw-line-height-1-5">Принимай активное участие в голосовании и выиграй одну из трех
+                эксклюзивных платиновых клубных карт. Обращаем внимание, что к голосованию допускаются только мужчины,
+                подтвердившие свой финансовый статус в приложении Denim и имеющие активный премиум-доступ.</p>
+            <div class="fw-text-center fw-inline-block fw-width-220 fw-mt-20">
+                <a href="#" class="button button-pink button-full">Скачать Denim</a>
+            </div>
+            <div class="fw-mt-30 fw-text-center fw-fz-16">
+                У меня уже есть премиум доступ &mdash; <a href="#" data-closing-popup="man-info" data-opening-popup="authentication" class="js-change-popup fw-color-pink fw-text-underline-hover">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block popups %}{% endblock %}
+
+<!-- Scripts -->
+{% include "scripts.twig" %}
 </body>
 </html>
