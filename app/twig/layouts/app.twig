@@ -38,6 +38,26 @@
         </div>
     </div>
 
+    <div class="popup-wrapper js-popup" data-popup="confirmation">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-20 fw-pr-20 fw-text-center fw-pb-10 fw-width-450">
+                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">Подтверждение участия</p>
+                <p class="fw-mt-15 fw-line-height-1-4">Для продолжения введите ваш код участника, <br> оправленный на номер +7(925)***-**-21</p>
+                <div class="fw-mt-10 fw-relative fw-ml-70 fw-mr-70">
+                    <input type="password" placeholder="Введите код из SMS" class="fw-color-black fw-text-center fw-width-1-1 fw-height-40 fw-pl-42 fw-pr-42 fw-border-box">
+                    <a href="#" class="fw-absolute fw-absolute-center-right fw-mr-10 js-change-password-type"><i class="icon icon-eye"></i></a>
+                </div>
+                <div class="fw-mt-15 fw-width-200 fw-mr-auto fw-ml-auto">
+                    <button type="submit" class="button button-full button-pink"><span class="fw-text-capitalize">Подтвердить</span></button>
+                </div>
+                <div class="fw-text-center fw-mt-15">
+                    <a href="#" class="fw-color-pink fw-text-underline-hover js-change-popup" data-opening-popup="password-forget" data-closing-popup="authentication"><span>Выслать код повторно?</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="popup-wrapper js-popup" data-popup="password-forget">
         <div class="popup">
             <a href="#" class="popup__close js-close-popup"></a>

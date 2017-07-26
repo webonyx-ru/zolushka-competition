@@ -3058,6 +3058,15 @@
   text-overflow: ellipsis;
 }
 
+.fw-reset-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.fw-hidden {
+  display: none;
+}
+
 .icon {
   display: inline-block;
   vertical-align: middle;
