@@ -471,6 +471,9 @@ var YOURAPPNAME = function () {
                 $options.attr('selected', false);
                 $currentLink.closest('.form-select-box').find('select').find('option').eq($currentLink.index()).attr('selected', true);
                 $selectBox.removeClass('active');
+
+                $selectBoxList.stop().slideUp(150);
+                $selectBox.removeClass('active');
             });
         });
 
