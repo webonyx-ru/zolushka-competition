@@ -551,4 +551,11 @@ var YOURAPPNAME = function () {
             timeout += 200;
         });
     });
+
+    $('.js-chose-other-photo').on('click', function (e) {
+        e.preventDefault();
+
+        app.popups().closePopup('warning-photo');
+        $('input[type="file"]:eq(0)').click();
+    });
 })();
