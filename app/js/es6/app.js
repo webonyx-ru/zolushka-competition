@@ -533,4 +533,11 @@ class YOURAPPNAME {
         });
     });
 
+    $('.js-chose-other-photo').on('click', function (e) {
+        e.preventDefault();
+
+        app.popups().closePopup('warning-photo');
+        $('input[type="file"]:eq(0)').click();
+    })
+
 })();
