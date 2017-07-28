@@ -1,608 +1,621 @@
 body
-  font-family: 'Helvetica Neue', 'Lato', sans-serif
-  font-size: 14px
-  font-weight: normal
+	font-family: 'Helvetica Neue', 'Lato', sans-serif
+	font-size: 14px
+	font-weight: normal
 
 hr
-  height: 1px
-  opacity: 0.3
-  background-color: $colorBlack
+	height: 1px
+	opacity: 0.3
+	background-color: $colorBlack
 
 input, textarea, select, option
-  border-radius: 3px
-  background-color: #ffffff
-  border: 1px solid #bad5d5
-  box-sizing: border-box
-  outline: none
-  font-family: 'Helvetica Neue', sans-serif
-  transition: border-color .3s ease-in-out
+	border-radius: 3px
+	background-color: #ffffff
+	border: 1px solid #bad5d5
+	box-sizing: border-box
+	outline: none
+	font-family: 'Helvetica Neue', sans-serif
+	transition: border-color .3s ease-in-out
 
-  &:focus
-    border-color: $colorPink
+	&:focus
+		border-color: $colorPink
 
-  &.error-field
-    border-color: $colorPink
-    box-shadow: 0 0 5px $colorPink
+	&.error-field
+		border-color: $colorPink
+		box-shadow: 0 0 5px $colorPink
 
 input, select, option
-  height: 50px
+	height: 50px
 
 textarea
-  height: 150px
-  resize: none
+	height: 150px
+	resize: none
 
 .form-checkbox
-  display: inline-flex
-  align-items: center
-  cursor: pointer
-  input
-    width: 0
-    height: 0
-    display: none
+	display: inline-flex
+	align-items: center
+	cursor: pointer
+	input
+		width: 0
+		height: 0
+		display: none
 
-  input:checked + .form-checkbox__box
-    border-color: $colorPink
-    background-color: $colorPink
+	input:checked + .form-checkbox__box
+		border-color: $colorPink
+		background-color: $colorPink
 
-    &::before
-      border-color: $colorWhite
+		&::before
+			border-color: $colorWhite
 
-  .form-checkbox__box
-    width: 18px
-    height: 18px
-    display: block
-    border: 1px solid #bad5d5
-    margin-right: 5px
-    position: relative
-    transition: all .3s ease-in-out
-    border-radius: 3px
+	.form-checkbox__box
+		width: 18px
+		height: 18px
+		display: block
+		border: 1px solid #bad5d5
+		margin-right: 5px
+		position: relative
+		transition: all .3s ease-in-out
+		border-radius: 3px
 
-    &:before
-      display: block
-      content: ''
-      width: 11px
-      height: 6px
-      border-bottom: 2px solid
-      border-left: 2px solid
-      border-color: transparent
-      position: absolute
-      left: 50%
-      top: 50%
-      transition: all .3s ease-in-out
-      transform: translateY(-75%) translateX(-50%)  rotate(-45deg)
+		&:before
+			display: block
+			content: ''
+			width: 11px
+			height: 6px
+			border-bottom: 2px solid
+			border-left: 2px solid
+			border-color: transparent
+			position: absolute
+			left: 50%
+			top: 50%
+			transition: all .3s ease-in-out
+			transform: translateY(-75%) translateX(-50%) rotate(-45deg)
 
 .form-select-box
-  position: relative
-  background-color: $colorWhite
-  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
-  border: solid 1px #bad5d5
-  border-radius: 3px
-  width: 100%
-  height: 36px
-  box-sizing: border-box
+	position: relative
+	background-color: $colorWhite
+	box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
+	border: solid 1px #bad5d5
+	border-radius: 3px
+	width: 100%
+	height: 36px
+	box-sizing: border-box
 
-  &.active
-    > a
-      &::after
-        transform: translateY(-50%) rotate(180deg)
+	&.active
+		> a
+			&::after
+				transform: translateY(-50%) rotate(180deg)
 
-    //
-    //.form-select-box__list
-    //  max-height: 200px
-    //  //transform: scale(1)
+	//
+	//.form-select-box__list
+	//  max-height: 200px
+	//  //transform: scale(1)
 
-  .form-select-box__list
-    position: absolute
-    top: calc(100% + 5px)
-    box-sizing: border-box
-    padding: 10px 0
-    left: 0
-    width: 100%
-    z-index: 2
-    background-color: $colorWhite
-    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
-    border: solid 1px #bad5d5
-    border-radius: 3px
-    display: none
-    //transform: scale(0.7)
+	.form-select-box__list
+		position: absolute
+		top: calc(100% + 5px)
+		box-sizing: border-box
+		padding: 10px 0
+		left: 0
+		width: 100%
+		z-index: 2
+		background-color: $colorWhite
+		box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06)
+		border: solid 1px #bad5d5
+		border-radius: 3px
+		display: none
+		//transform: scale(0.7)
 
-    > a
-      display: block
-      line-height: 26px
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-      box-sizing: border-box
-      padding: 0 15px 0 40px
-      position: relative
-      color: $colorBlack
-      text-decoration: none
+		> a
+			display: block
+			line-height: 26px
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+			box-sizing: border-box
+			padding: 0 15px 0 40px
+			position: relative
+			color: $colorBlack
+			text-decoration: none
 
-      &::before
-        display: block
-        opacity: 0
-        content: ''
-        left: 15px
-        top: 50%
-        position: absolute
-        width: 12px
-        height: 4px
-        margin-top: -3px
-        transform: translateY(-50%) rotate(-45deg)
-        border-color: #fafafa
-        border-bottom: 2px solid
-        border-left: 2px solid
-      
-      &.active,
-      &:hover
-        background-color: #e7edef
+			&::before
+				display: block
+				opacity: 0
+				content: ''
+				left: 15px
+				top: 50%
+				position: absolute
+				width: 12px
+				height: 4px
+				margin-top: -3px
+				transform: translateY(-50%) rotate(-45deg)
+				border-color: #fafafa
+				border-bottom: 2px solid
+				border-left: 2px solid
 
-      &.active
-        &::before
-          opacity: 1
+			&.active,
+			&:hover
+				background-color: #e7edef
 
-  select
-    height: 0
-    width: 0
-    visibility: hidden
-    border: none
-    opacity: 0
+			&.active
+				&::before
+					opacity: 1
 
-  > a
-    display: flex
-    width: 100%
-    height: 100%
-    cursor: pointer
-    align-items: center
-    padding: 0 30px 0 15px
-    box-sizing: border-box
-    text-decoration: none
-    color: $colorBlack
-    position: relative
+	select
+		height: 0
+		width: 0
+		visibility: hidden
+		border: none
+		opacity: 0
 
-    &::after
-      position: absolute
-      transition: all .3s ease-in-out
-      content: ''
-      display: block
-      right: 10px
-      top: 50%
-      transform: translateY(-50%)
-      width: 0
-      height: 0
-      border-style: solid
-      border-width: 8px 5px 0 5px
-      border-color: #bad5d5 transparent transparent transparent
+	> a
+		display: flex
+		width: 100%
+		height: 100%
+		cursor: pointer
+		align-items: center
+		padding: 0 30px 0 15px
+		box-sizing: border-box
+		text-decoration: none
+		color: $colorBlack
+		position: relative
+
+		&::after
+			position: absolute
+			transition: all .3s ease-in-out
+			content: ''
+			display: block
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 8px 5px 0 5px
+			border-color: #bad5d5 transparent transparent transparent
 
 .wrapper
-  max-width: 100%
-  width: 100%
-  overflow: hidden
-  min-width: 1000px
-  display: flex
-  flex-direction: column
-  //min-height: 100vh
+	max-width: 100%
+	width: 100%
+	overflow: hidden
+	min-width: 1000px
+	display: flex
+	flex-direction: column
+//min-height: 100vh
 
 .container
-  max-width: 1140px
-  width: 100%
-  margin: 0 auto
-  padding: 0 15px
-  box-sizing: border-box
+	max-width: 1140px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+	box-sizing: border-box
 
 .index-first-screen
-  background: linear-gradient(rgba(#fff, 0.1) 90%, rgba(#fff, 1)), url('../images/pages/index/bg.jpg') no-repeat center top / cover
-  min-height: 690px
-  margin-bottom: -50px
+	background: linear-gradient(rgba(#fff, 0.1) 90%, rgba(#fff, 1)), url('../images/pages/index/bg.jpg') no-repeat center top / cover
+	min-height: 690px
+	margin-bottom: -50px
 
 .button
-  cursor: pointer
-  min-width: 205px
-  display: inline-flex
-  height: 50px
-  align-items: center
-  justify-content: center
-  box-sizing: border-box
-  padding: 3px 5px
-  color: $colorBlack
-  background-color: $colorBlueLight
-  transition: all .3s ease-in-out
-  text-transform: uppercase
-  border: 2px solid $colorBlueLight
-  border-radius: 100px
-  text-decoration: none
-  outline: none
-  font-weight: bold
-  font-size: 14px
-  text-align: center
-  
-  &.button-dark-blue
-    background-color: #24dff1
-    border-color: #24dff1
-    
-    &:hover
-      background-color: #24dff1
-      border-color: #24dff1
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba(#24dff1, 0.4)
+	cursor: pointer
+	min-width: 205px
+	display: inline-flex
+	height: 50px
+	align-items: center
+	justify-content: center
+	box-sizing: border-box
+	padding: 3px 5px
+	color: $colorBlack
+	background-color: $colorBlueLight
+	transition: all .3s ease-in-out
+	text-transform: uppercase
+	border: 2px solid $colorBlueLight
+	border-radius: 100px
+	text-decoration: none
+	outline: none
+	font-weight: bold
+	font-size: 14px
+	text-align: center
 
-  & > *
-    margin: auto
+	&.button-download-other
+		border-radius: 5px
+		font-size: 16px
+		text-transform: none
 
-  &.button-large
-    height: 65px
+	&.button-dark-blue
+		background-color: #24dff1
+		border-color: #24dff1
 
-  &.button-small
-    height: 36px
-    font-weight: normal
-    font-size: 16px
-    border-width: 1px
-    text-transform: none
-    
-  &.button-very-small
-    height: 26px
-    min-width: 110px
-    font-weight: 400
-    font-size: 14px
-    text-transform: none
-    line-height: 24px
-    opacity: 0.9
-    vertical-align: middle
+		&:hover
+			background-color: #24dff1
+			border-color: #24dff1
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba(#24dff1, 0.4)
 
-  &.button-full
-    border-radius: 5px
-    width: 100%
-    max-width: 100%
-    min-width: 0
+	& > *
+		margin: auto
 
-  &:hover
-    background-color: $colorBlueLight
-    border-color: $colorBlueLight
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorBlueLight, 0.4)
+	&.button-large
+		height: 65px
 
-  &.button-yellow
-    background: $colorYellow
-    border-color: $colorYellow
+	&.button-small
+		height: 36px
+		font-weight: normal
+		font-size: 16px
+		border-width: 1px
+		text-transform: none
 
-    &:hover
-      background-color: $colorYellow
-      border-color: $colorYellow
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorYellow, 0.4)
+	&.button-very-small
+		height: 26px
+		min-width: 110px
+		font-weight: 400
+		font-size: 14px
+		text-transform: none
+		line-height: 24px
+		opacity: 0.9
+		vertical-align: middle
 
-  &.button-pink
-    color: $colorWhite
-    background: $colorPink
-    border-color: $colorPink
+	&.button-full
+		border-radius: 5px
+		width: 100%
+		max-width: 100%
+		min-width: 0
 
-    &:hover
-      background-color: $colorPink
-      border-color: $colorPink
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
+	&:hover
+		background-color: $colorBlueLight
+		border-color: $colorBlueLight
+		box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorBlueLight, 0.4)
 
+	&.button-yellow
+		background: $colorYellow
+		border-color: $colorYellow
 
-  &.button-green
-    color: $colorWhite
-    background: $colorGreen
-    border-color: $colorGreen
+		&:hover
+			background-color: $colorYellow
+			border-color: $colorYellow
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorYellow, 0.4)
 
-    &:hover
-      background-color: $colorGreen
-      border-color: $colorGreen
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorGreen, 0.4)
+	&.button-pink
+		color: $colorWhite
+		background: $colorPink
+		border-color: $colorPink
 
-  &.button-pink-transparent
-    color: $colorPink
-    background: transparent
-    border-color: $colorPink
+		&:hover
+			background-color: $colorPink
+			border-color: $colorPink
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
 
-    &:hover
-      background-color: transparent
-      border-color: $colorPink
-      color: $colorPink
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
+	&.button-green
+		color: $colorWhite
+		background: $colorGreen
+		border-color: $colorGreen
 
-  &.button-white
-    background: $colorWhite
-    border-color: $colorWhite
+		&:hover
+			background-color: $colorGreen
+			border-color: $colorGreen
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorGreen, 0.4)
 
-    &:hover
-      background-color: $colorWhite
-      border-color: $colorWhite
-      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorWhite, 0.4)
+	&.button-pink-transparent
+		color: $colorPink
+		background: transparent
+		border-color: $colorPink
+
+		&:hover
+			background-color: transparent
+			border-color: $colorPink
+			color: $colorPink
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorPink, 0.4)
+
+	&.button-white
+		background: $colorWhite
+		border-color: $colorWhite
+
+		&:hover
+			background-color: $colorWhite
+			border-color: $colorWhite
+			box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2), 0 4px 14px 0 rgba($colorWhite, 0.4)
 
 .list-unstyled
-  list-style: none
-  
+	list-style: none
+
 .vote-section
-  background-image: linear-gradient(to bottom, #443a91, #302772)
-  display: flex
-  flex-grow: 1
+	background-image: linear-gradient(to bottom, #443a91, #302772)
+	display: flex
+	flex-grow: 1
 
-  .container
-    margin-top: auto
-    margin-bottom: auto
+	.container
+		margin-top: auto
+		margin-bottom: auto
 
-  .vote-section__article
-    background-color: #fafafa
-    box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5)
-    transform-style: preserve-3d
-  
-    &.transition
-      transition: all 1s cubic-bezier(0.19, 0.4, 0.26, 1.13)
-    
-    &.animate-flip
-      transform: rotateX(360deg)
-      
+	.vote-section__article
+		background-color: #fafafa
+		box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.5)
+		transform-style: preserve-3d
+
+		&.transition
+			transition: all 1s cubic-bezier(0.19, 0.4, 0.26, 1.13)
+
+		&.animate-flip
+			transform: rotateX(360deg)
+
 .vote-trigger__button
-  & > *
-    margin: auto
-    display: none
-    
-    &:first-child
-      display: flex
-      
-  &.active
-    & > *
-      display: none
-      
-      &:last-child
-        display: flex
+	& > *
+		margin: auto
+		display: none
+
+		&:first-child
+			display: flex
+
+	&.active
+		& > *
+			display: none
+
+			&:last-child
+				display: flex
 
 [data-info-title]
-  position: relative
+	position: relative
 
-  &:after,
-  &:before
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    display: none
-    z-index: 1
+	&:after,
+	&:before
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		display: none
+		z-index: 1
 
-  &:after
-    content: attr(data-info-title)
-    align-items: center
-    justify-content: center
-    position: absolute
-    bottom: calc(100% + 10px)
-    box-sizing: border-box
-    padding: 5px 10px
-    color: $colorWhite
-    background-color: #2f2e2e
+	&:after
+		content: attr(data-info-title)
+		align-items: center
+		justify-content: center
+		position: absolute
+		bottom: calc(100% + 10px)
+		box-sizing: border-box
+		padding: 5px 10px
+		color: $colorWhite
+		background-color: #2f2e2e
 
+	&::before
+		content: ''
+		bottom: 100%
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 10px 7.5px 0 7.5px
+		border-color: #2f2e2e transparent transparent transparent
 
-  &::before
-    content: ''
-    bottom: 100%
-    width: 0
-    height: 0
-    border-style: solid
-    border-width: 10px 7.5px 0 7.5px
-    border-color: #2f2e2e transparent transparent transparent
-
-  &:hover
-    &:after,
-    &:before
-      display: flex
+	&:hover
+		&:after,
+		&:before
+			display: flex
 
 .photolist
-  &.photolist-full
-    > div
-      display: block
-      &:nth-last-child(1)
-        display: none
+	&.photolist-full
+		> div
+			display: block
+			&:nth-last-child(1)
+				display: none
 
+	> div
+		display: none
 
-  > div
-    display: none
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-last-child(1)
+			display: block
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-last-child(1)
-      display: block
+	.fw-bg-color-blue
+		transition: all 0.3s ease
 
-  .fw-bg-color-blue
-    transition: all 0.3s ease
-
-    &:hover
-      box-shadow: inset 0 0 0 1000px rgba(#000, 0.3)
+		&:hover
+			box-shadow: inset 0 0 0 1000px rgba(#000, 0.3)
 
 .photolist__item
-  transform: scale(0.7)
-  display: flex
-  opacity: 0
-  transition: all 0.3s ease
-  border-radius: 10px
+	transform: scale(0.7)
+	display: flex
+	opacity: 0
+	transition: all 0.3s ease
+	border-radius: 10px
 
-  &:hover
-    box-shadow: 0 0 10px #999
+	&:hover
+		box-shadow: 0 0 10px #999
 
-  &.visiblity-true
-    opacity: 1
-    transform: scale(1)
-
+	&.visiblity-true
+		opacity: 1
+		transform: scale(1)
 
 #image-drop-box
-  background-color: rgba(255, 255, 255, 0.4)
-  border: dashed 1px #90acb8
-  position: relative
+	background-color: rgba(255, 255, 255, 0.4)
+	border: dashed 1px #90acb8
+	position: relative
 
-  .preloader-wrapper
-    background-color: rgba($colorWhite, .7)
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    align-items: center
-    justify-content: center
-    z-index: 3
-    display: none
+	.preloader-wrapper
+		background-color: rgba($colorWhite, .7)
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		align-items: center
+		justify-content: center
+		z-index: 3
+		display: none
 
-  &.image-drop-box-full
-    .image-drop-box__selector
-      display: none
+	&.image-drop-box-full
+		.image-drop-box__selector
+			display: none
 
-  &.image-drop-box-loading
-    .preloader-wrapper
-      display: flex
+	&.image-drop-box-loading
+		.preloader-wrapper
+			display: flex
 
-  &.image-drop-box-has-file
-    .image-drop-box__content
-      display: none
+	&.image-drop-box-has-file
+		.image-drop-box__content
+			display: none
 
-    .image-drop-box__preview
-      display: block
+		.image-drop-box__preview
+			display: block
 
-  .image-drop-box__content
-    display: block
-    input
-      position: absolute
-      display: block
-      height: 100%
-      width: 100%
-      border: none
-      z-index: 1
-      top: 0
-      left: 0
-      opacity: 0
+	.image-drop-box__content
+		display: block
+		input
+			position: absolute
+			display: block
+			height: 100%
+			width: 100%
+			border: none
+			z-index: 1
+			top: 0
+			left: 0
+			opacity: 0
 
-    label
-      position: relative
-      z-index: 2
+		label
+			position: relative
+			z-index: 2
 
-  .image-drop-box__preview
-    position: relative
-    z-index: 2
-    display: none
+	.image-drop-box__preview
+		position: relative
+		z-index: 2
+		display: none
 
-    &.preview
-      .preview__thumb
-        i
-          display: none
+		&.preview
+			.preview__thumb
+				i
+					display: none
 
-        &:hover
-          img
-            filter: brightness(70%)
-          i
-            display: block
+				&:hover
+					img
+						filter: brightness(70%)
+					i
+						display: block
 
 .arrow
-  width: 52px
-  height: 52px
-  margin-top: -9px
-  cursor: pointer
-  display: flex
-  align-items: center
-  justify-content: center
-  font-size: 0
-  position: relative
-  transition: all .3s ease-in-out
+	width: 52px
+	height: 52px
+	margin-top: -9px
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 0
+	position: relative
+	transition: all .3s ease-in-out
 
-  &::before
-    display: block
-    content: ''
-    width: 28px
-    height: 2px
-    background-color: $colorPink
-    transition: all .3s ease-in-out
+	&::before
+		display: block
+		content: ''
+		width: 28px
+		height: 2px
+		background-color: $colorPink
+		transition: all .3s ease-in-out
 
-  &:after
-    display: block
-    content: ''
-    border-top: 2px solid $colorPink
-    border-left: 2px solid $colorPink
-    transition: all .3s ease-in-out
-    width: 16px
-    height: 16px
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
+	&:after
+		display: block
+		content: ''
+		border-top: 2px solid $colorPink
+		border-left: 2px solid $colorPink
+		transition: all .3s ease-in-out
+		width: 16px
+		height: 16px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
 
-  &.arrow-left
-    &::after
-      left: 13px
-      transform: translateY(-50%) rotate(-45deg)
+	&.arrow-left
+		&::after
+			left: 13px
+			transform: translateY(-50%) rotate(-45deg)
 
-  &.arrow-right
-    &::after
-      right: 13px
-      transform: translateY(-50%) rotate(135deg)
+	&.arrow-right
+		&::after
+			right: 13px
+			transform: translateY(-50%) rotate(135deg)
 
-  &:hover
-    background-color: $colorPink
+	&:hover
+		background-color: $colorPink
 
-    &::after
-      border-color: $colorWhite
-    &::before
-      background-color: $colorWhite
+		&::after
+			border-color: $colorWhite
+		&::before
+			background-color: $colorWhite
 
 .member-questionnaire
-  position: relative
+	position: relative
 
-  .member-questionnaire__content
-    display: none
+	.member-questionnaire__content
+		display: none
 
-  &::after
-    position: absolute
-    bottom: 0
-    display: block
-    content: ''
-    width: 100%
-    height: 76px
-    z-index: 1
-    background-image: linear-gradient(to bottom, rgba(231, 237, 239, 0), #e7edef)
+	&::after
+		position: absolute
+		bottom: 0
+		display: block
+		content: ''
+		width: 100%
+		height: 76px
+		z-index: 1
+		background-image: linear-gradient(to bottom, rgba(231, 237, 239, 0), #e7edef)
 
-  &.active
-    &::after
-      display: none
+	&.active
+		&::after
+			display: none
 
 .preloader
-  width: 35px
-  height: 35px
-  display: inline-block
-  padding: 0
-  border-radius: 100%
-  border: 2px solid
-  border-top-color: rgba(0, 0, 0, 0.65)
-  border-bottom-color: rgba(0, 0, 0, 0.15)
-  border-left-color: rgba(0, 0, 0, 0.65)
-  border-right-color: rgba(0, 0, 0, 0.15)
-  animation: preloader4 0.8s linear infinite
+	width: 35px
+	height: 35px
+	display: inline-block
+	padding: 0
+	border-radius: 100%
+	border: 2px solid
+	border-top-color: rgba(0, 0, 0, 0.65)
+	border-bottom-color: rgba(0, 0, 0, 0.15)
+	border-left-color: rgba(0, 0, 0, 0.65)
+	border-right-color: rgba(0, 0, 0, 0.15)
+	animation: preloader4 0.8s linear infinite
 
 @keyframes preloader4
-  from
-    transform: rotate(0deg)
+	from
+		transform: rotate(0deg)
 
-  to
-    transform: rotate(360deg)
-
+	to
+		transform: rotate(360deg)
 
 @-webkit-keyframes preloader4
-  from
-    -webkit-transform: rotate(0deg)
+	from
+		-webkit-transform: rotate(0deg)
 
-  to
-    -webkit-transform: rotate(360deg)
+	to
+		-webkit-transform: rotate(360deg)
 
 .footer-socials
-  @media screen and (max-width: 1239px)
-    flex-wrap: wrap
-    justify-content: flex-end
-    margin-top: 10px
+	@media screen and (max-width: 1239px)
+		flex-wrap: wrap
+		justify-content: flex-end
+		margin-top: 10px
 
-    > a
-      margin: 5px 0
-      flex-shrink: 0
+		> a
+			margin: 5px 0
+			flex-shrink: 0
 
 .main-info-form-box
-  > input:focus + span > i
-    +sprite(icon-pencil-pink)
+	> input:focus + span > i
+		+sprite(icon-pencil-pink)
 
 .additional-info-form-box
-  //flex-direction: row-reverse
+	//flex-direction: row-reverse
 
-  > textarea:focus + p
-    color: $colorPink
+	> textarea:focus + p
+		color: $colorPink
+
+.photo-error
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.7)
+
+.popup-warning-error
+	position: absolute
+	top: -15px
+	left: 125px

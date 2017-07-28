@@ -12,81 +12,86 @@
 @import "text"
 
 .fw-pointer
-  cursor: pointer
+	cursor: pointer
 
 .fw-va-middle
-  vertical-align: middle
+	vertical-align: middle
 
 .fw-overflow-hidden
-  overflow: hidden
+	overflow: hidden
 
 .fw-img-cover
-  width: 100%
-  height: 100%
-  object-fit: cover
-  
+	width: 100%
+	height: 100%
+	object-fit: cover
+
 .fw-no-wrap
-  white-space: nowrap
+	white-space: nowrap
 
 @each $value in '1-2', '1-4', '1-5', '1-7', '2'
-  .fw-line-height-#{$value}
-    line-height: unquote(str_replace($value, '-', '.'))
+	.fw-line-height-#{$value}
+		line-height: unquote(str_replace($value, '-', '.'))
 
 .fw-inline-block
-  display: inline-block
+	display: inline-block
 
 .fw-block
-  display: block
+	display: block
 
 .fw-inline
-  display: inline
+	display: inline
 
 .fw-relative
-  position: relative
+	position: relative
 
 .fw-absolute
-  position: absolute
+	position: absolute
 
-  &.fw-absolute-center
-    left: 50%
-    top: 50%
-    transform: translateX(-50%) translateY(-50%)
-    z-index: 2
+	&.fw-absolute-center
+		left: 50%
+		top: 50%
+		transform: translateX(-50%) translateY(-50%)
+		z-index: 2
 
-  &.fw-absolute-top-right
-    top: 0 
-    right: 0
+	&.fw-absolute-top-right
+		top: 0
+		right: 0
 
-  &.fw-absolute-center-right
-    right: 0
-    top: 50%
-    transform: translateY(-50%)
+	&.fw-absolute-center-right
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
 
 @each $value in 50, 100, 135
-  .fw-box-proportional-#{$value}
-    position: relative
+	.fw-box-proportional-#{$value}
+		position: relative
 
-    &::after
-      display: block
-      content: ''
-      padding-top: unquote("#{$value}%")
+		&::after
+			display: block
+			content: ''
+			padding-top: unquote("#{$value}%")
 
-    > *
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-
+		> *
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
 
 .fw-text-ellipsis
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
 
 .fw-reset-link
-  color: inherit
-  text-decoration: inherit
+	color: inherit
+	text-decoration: inherit
 
 .fw-hidden
-  display: none
+	display: none
+
+.fw-position-relative
+	position: relative
+
+.fw-position-absolute
+	position: absolute

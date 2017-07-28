@@ -1,0 +1,221 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    {% include 'layouts/header.twig' %}
+
+    <div class="fw-pt-50 fw-pb-60 fw-bg-cover fw-bg-no-repeat fw-bg-center fw-bg-color-light-dark">
+        <div class="container">
+            <div class="fw-text-center">
+                <p class="fw-fz-30 fw-font-futura-demic fw-text-uppercase fw-mt-0 fw-mb-0">ВОЛКОВА ИРИНА, 23 года</p>
+                <p class="fw-font-futura-demic fw-mt-5 fw-mb-0">г.Нижний Новгород</p>
+            </div>
+            <div class="fw-grid fw-grid-30 fw-mt-20">
+                <div class="fw-width-1-3">
+                    <div class="fw-width-1-1 fw-bg-color-white fw-border-radius-10 fw-overflow-hidden">
+                        <div class="fw-width-1-1">
+                            <div class="fw-position-relative fw-border-radius-10 fw-overflow-hidden">
+                                <img src="http://placehold.it/500x500" alt="" class="fw-img-cover">
+                                <div class="photo-error fw-border-box fw-flex fw-flex-column fw-flex-middle fw-pt-50 fw-pl-20 fw-pb-20 fw-pr-20">
+                                    <i class="icon-error fw-mb-30 fw-flex-shrink-0"></i>
+                                    <p class="fw-fz-18 fw-font-bold fw-lh-1-32 fw-text-center fw-color-white">Внимание. Ваше фото не соответствует <a href="#" class="fw-color-pink">рекомендациям</a> по размещению.</p>
+                                    <p class="fw-fz-15 fw-lh-1-33 fw-text-center fw-color-white">Чтобы продолжить участие в конкурсе необходимо заменить фотографию.</p>
+                                    <span class="button button-pink button-download-other fw-width-1-1">Загрузить другое фото</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fw-border-box fw-pb-40 fw-pt-18 fw-pl-20 fw-pr-20">
+                            <div class="fw-mb-30 fw-grid fw-grid-5">
+                                <div class="fw-width-1-3">
+                                    <p class="fw-mt-0 fw-mb-0 fw-fz-12 fw-color-grey-dark">Все битв:</p>
+                                    <div class="fw-flex fw-flex-middle fw-mt-10">
+                                        <div class="fw-flex-shrink-no fw-mr-5">
+                                            <i class="icon icon-lightning"></i>
+                                        </div>
+                                        <div class="fw-flex-grow-1">
+                                            <p class="fw-fz-20 fw-mt-0 fw-mb-0">2342</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fw-width-1-3">
+                                    <p class="fw-mt-0 fw-mb-0 fw-fz-12 fw-color-grey-dark">Голосов:</p>
+                                    <div class="fw-flex fw-flex-middle fw-mt-10">
+                                        <div class="fw-flex-shrink-no fw-mr-5">
+                                            <i class="icon icon-heart"></i>
+                                        </div>
+                                        <div class="fw-flex-grow-1">
+                                            <p class="fw-fz-20 fw-mt-0 fw-mb-0">11</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fw-width-1-3">
+                                    <p class="fw-mt-0 fw-mb-0 fw-fz-12 fw-color-grey-dark">Место в рейтинге</p>
+                                    <div class="fw-flex fw-flex-middle fw-mt-10">
+                                        <div class="fw-flex-shrink-no fw-mr-5">
+                                            <i class="icon icon-list"></i>
+                                        </div>
+                                        <div class="fw-flex-grow-1">
+                                            <p class="fw-fz-20 fw-mt-0 fw-mb-0">130</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Как увеличить шансы на победу</p>
+                            <p class="fw-mt-15 fw-mb-0 fw-fz-16 fw-line-height-1-2">Подпишись на канал конкурса на <a
+                                        href="#" class="fw-color-pink fw-text-underline-hover">YouTube</a></p>
+                            <p class="fw-mt-20 fw-mb-0 fw-fz-16 fw-line-height-1-2">Подпишись на Denim в социальных
+                                сетях +10 мест в рейтинге:</p>
+                            <div class="fw-mt-10">
+                                <a href="#" class="fw-mr-5"><i class="icon icon-twitter-circle"></i></a>
+                                <a href="#" class="fw-mr-5"><i class="icon icon-vk-circle"></i></a>
+                                <a href="#" class="fw-mr-5"><i class="icon icon-facebook-circle"></i></a>
+                                <a href="#"><i class="icon icon-instagram-circle"></i></a>
+                            </div>
+                            <p class="fw-mt-20 fw-mb-0 fw-fz-16 fw-line-height-1-2">Сделай репост любой из записей +15
+                                мест в рейтинге <a href="#" class="fw-color-pink fw-text-underline-hover js-open-popup"
+                                                   data-popup-target="choose-post">Выбрать запись</a></p>
+                            <p class="fw-mt-30 fw-mb-0 fw-fz-16 fw-line-height-1-2">Поделись с друзьями новостью об
+                                участии в конкурсе +20 мест в рейтиге</p>
+                            <div class="fw-width-145 fw-mt-15">
+                                <a href="#"
+                                   class="button button-pink-transparent button-full button-small js-open-popup"
+                                   data-popup-target="share">
+                                    <span><i class="icon icon-external fw-mr-5"></i> Поделиться</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fw-width-2-3">
+                    <div class="fw-grid fw-grid-10 photolist">
+                        {% for i in 1..2 %}
+                            <div class="fw-width-1-3">
+                                <div class="photolist__item {% if i <= 2 %} visiblity-true{% endif %}">
+                                    <div class="fw-width-1-1 fw-box-proportional-100">
+                                        <div class="fw-border-radius-10 fw-overflow-hidden">
+                                            <img src="http://placehold.it/300x300" alt="" class="fw-img-cover">
+                                            <div class="photo-error fw-border-box fw-flex fw-flex-column fw-flex-middle fw-pt-50 fw-pl-20 fw-pb-20 fw-pr-20">
+                                                <i class="icon-error fw-mb-30 fw-flex-shrink-0"></i>
+                                                <p class="fw-fz-19 fw-lh-1-32 fw-text-center fw-color-white">Внимание. Ваше фото не соответствует <a href="#" class="fw-color-pink">рекомендациям</a> по размещению.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="fw-width-1-3">
+                            <div class="fw-width-1-1 fw-box-proportional-100">
+                                <label class="fw-text-none fw-border-radius-10 fw-border-color-pink fw-border-width-1 fw-border-style-solid fw-overflow-hidden fw-flex text-center fw-flex-column fw-flex-middle fw-flex-center">
+                                    <i class="icon icon-camera fw-inline-block fw-mb-20"></i>
+                                    <span class="fw-mt-0 fw-mb-0 fw-fz-16 fw-font-bold fw-color-pink fw-block fw-text-center">Добавить <br> фотографии</span>
+                                    <input type="file" name="" class="fw-hidden">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="fw-mt-30 fw-mb-0 fw-fz-30 fw-font-futura-demic">Блиц-опрос</p>
+                    <div class="member-questionnaire">
+                        <div class="fw-mt-30">
+                            <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Что ты больше всего в себе любишь?</p>
+                            <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur maxime molestiae neque placeat repudiandae totam unde voluptatibus. Autem omnis, similique!</p>
+                        </div>
+                        <div class="fw-mt-20">
+                            <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Какая часть тела у тебя самая красивая?</p>
+                            <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ducimus nemo porro quae repudiandae unde!</p>
+                        </div>
+                        <div class="fw-mt-20">
+                            <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Какие у тебя таланты помимо эффектной внешности? Спортивный разряд, умение играть на музыкальном инструменте?</p>
+                            <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at labore minus nihil velit! A amet blanditiis earum esse fugit in molestiae nulla recusandae rem, vel? Aliquam assumenda commodi ea expedita, magni nam nostrum optio quibusdam, ratione repellendus suscipit, voluptatum.</p>
+                        </div>
+                        <div class="member-questionnaire__content">
+                            <div class="fw-mt-30">
+                                <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Какие ошибки чаще всего совершают мужчины, пытаясь познакомиться с тобой?</p>
+                                <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, laboriosam.</p>
+                            </div>
+                            <div class="fw-mt-20">
+                                <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Какие ошибки чаще всего совершают мужчины, пытаясь познакомиться с тобой?</p>
+                                <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolores error quia, quidem repudiandae voluptatum?</p>
+                            </div>
+                            <div class="fw-mt-20">
+                                <p class="fw-fz-16 fw-font-bold fw-mt-0 fw-mb-0">Какие ошибки чаще всего совершают мужчины, пытаясь познакомиться с тобой?</p>
+                                <p class="fw-mb-0 fw-fz-16 fw-mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consectetur consequatur, dolorum eaque eveniet hic, iure iusto maxime nihil officiis optio provident quo quod vel?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fw-mt-10">
+                        <a href="#" class="fw-color-pink fw-text-underline-hover fw-fz-16 js-slide-questionnaire">Все вопросы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+{% endblock %}
+
+{% block popups %}
+    <div class="popup-wrapper js-popup" data-popup="share">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-30 fw-pr-30 fw-width-550">
+                <div class="fw-width-1-1 fw-border-box fw-pl-20 fw-pr-20 fw-pb-30 fw-pt-20 fw-border-radius-5 fw-border-style-solid fw-border-width-1 fw-border-color-grey-light">
+                    <p class="fw-mt-0 fw-mb-0 fw-fz-16 fw-font-bold">Я учавствую в конкурсе Золушка в бикини</p>
+                    <div class="fw-width-1-1 fw-box-proportional-50 fw-mt-20">
+                        <div>
+                            <img src="http://placehold.it/550x250" alt="" class="fw-img-cover">
+                        </div>
+                    </div>
+                    <p class="fw-color-grey-dark fw-line-height-1-2 fw-mt-20 fw-mb-0">Правила этикета в театре и музее
+                        никто не отменял, но и не запрещал понимать их по-своему: предлагаем тебе свою версию советов по
+                        поведению на таких мероприятиях.</p>
+                    <p class="fw-fz-16 fw-font-bold fw-mt-30 fw-mb-0">Поделись этим в своей ленте</p>
+                    <div class="fw-mt-20">
+                        <a href="#" class="fw-mr-5"><i class="icon icon-twitter-circle"></i></a>
+                        <a href="#" class="fw-mr-5"><i class="icon icon-vk-circle"></i></a>
+                        <a href="#" class="fw-mr-5"><i class="icon icon-facebook-circle"></i></a>
+                        <a href="#"><i class="icon icon-instagram-circle"></i></a>
+                    </div>
+                </div>
+                <div class="fw-text-center fw-mt-30">
+                    <a href="#" class="fw-color-pink fw-fz-16 fw-text-none js-close-popup">Закрыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-wrapper js-popup" data-popup="choose-post">
+        <div class="popup">
+            <a href="#" class="popup__close js-close-popup"></a>
+            <div class="fw-border-box fw-pl-20 fw-pr-20">
+                <p class="fw-fz-30 fw-font-futura-demic fw-mt-0 fw-mb-0 fw-text-center">Выберите запись</p>
+                <div class="fw-grid fw-grid-15 fw-mt-30">
+                    {% for i in 1..3 %}
+                        <div class="fw-width-1-3">
+                            <div class="fw-width-1-1 fw-border-box fw-pl-10 fw-pr-10 fw-pb-20 fw-pt-10 fw-border-radius-5 fw-border-style-solid fw-border-width-1 fw-border-color-grey-light">
+                                <p class="fw-mt-0 fw-mb-0 fw-fz-16 fw-font-bold">Правила эротического этикета в театре и
+                                    музее</p>
+                                <div class="fw-width-1-1 fw-box-proportional-50 fw-mt-20">
+                                    <div>
+                                        <img src="http://placehold.it/300x150" alt="" class="fw-img-cover">
+                                    </div>
+                                </div>
+                                <p class="fw-color-grey-dark fw-line-height-1-2 fw-mt-10 fw-mb-0 fw-line-height-1-4">Правила этикета в
+                                    театре и музее никто не отменял, но и не запрещал понимать их по-своему: предлагаем
+                                    тебе свою версию советов по поведению на таких мероприятиях.</p>
+                                <p class="fw-fz-16 fw-font-bold fw-mt-40 fw-mb-0">Поделись этим в своей ленте</p>
+                                <div class="fw-mt-10">
+                                    <a href="#" class="fw-mr-5"><i class="icon icon-twitter-circle"></i></a>
+                                    <a href="#" class="fw-mr-5"><i class="icon icon-vk-circle"></i></a>
+                                    <a href="#" class="fw-mr-5"><i class="icon icon-facebook-circle"></i></a>
+                                    <a href="#"><i class="icon icon-instagram-circle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="fw-text-center fw-mt-30">
+                    <a href="#" class="fw-color-pink fw-fz-16 fw-text-none js-close-popup">Закрыть</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
