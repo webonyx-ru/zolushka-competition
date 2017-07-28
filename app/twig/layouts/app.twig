@@ -137,7 +137,7 @@
             <p class="fw-fz-30 fw-font-futura-demic fw-text-center fw-text-uppercase fw-mb-15 fw-mt-0">Внимание!</p>
             <p class="fw-fz-16 fw-text-center fw-mb-30">Ваше фото не соответствует рекомендациям - загрузите другие</p>
             <div class="fw-position-relative fw-width-150 fw-height-150 fw-mr-auto fw-ml-auto">
-                <img src="http://placehold.it/150x150" alt="" class="fw-img-cover">
+                <img src="http://placehold.it/150x150" alt="" class="fw-img-cover fw-border-radius-5">
                 <div class="popup-warning-error">
                     <i class="icon-error-36x36"></i>
                 </div>
@@ -146,13 +146,13 @@
                 <span class="button button-pink button-download-other fw-width-200 fw-text-capitalize">Загрузить другое</span>
             </p>
             <div class="fw-mt-30 fw-text-center fw-fz-16">
-                <a href="#" class="js-close-popup fw-color-pink fw-text-underline-hover fw-fz-16">Рекомендации к размещаемым фото</a>
+                <a href="#" class="fw-color-pink fw-text-underline-hover fw-fz-16 js-change-popup" data-closing-popup="warning-photo" data-opening-popup="recommendation">Рекомендации к размещаемым фото</a>
             </div>
         </div>
     </div>
 </div>
 
-<div class="popup-wrapper js-popup" data-popup="warning-photo">
+<div class="popup-wrapper js-popup" data-popup="vote-finished">
     <div class="popup">
         <a href="#" class="popup__close js-close-popup"></a>
         <div class="fw-flex fw-flex-column fw-flex-middle fw-border-box fw-pl-30 fw-pr-30 fw-text-center fw-pb-10 fw-width-450">
@@ -162,6 +162,81 @@
             <p class="fw-fz-16 fw-text-center fw-mt-0 fw-mb-80">Вы уже проголосовали за все пары</p>
             <div class="fw-mt-30 fw-text-center fw-fz-16">
                 <a href="#" class="js-close-popup fw-color-pink fw-text-underline-hover">Понятно</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper js-popup" data-popup="recommendation">
+    <div class="popup">
+        <a href="#" class="popup__close js-close-popup"></a>
+        <div class="fw-border-box fw-pl-20 fw-pr-20 fw-max-width-840">
+            <p class="fw-fz-30 fw-font-futura-demic fw-mt-0 fw-mb-0">Рекомендации по размещению фото </p>
+            <p class="fw-fz-16 fw-line-height-1-5 fw-mt-20 fw-mb-0"><span class="fw-font-bold">Фото в бикини.</span>
+                «Золушка в бикини» – это конкурс бикини, следовательно, речь идет о фотографиях в купальниках, а не
+                в платьях и шубах. Покажите себя – свое лицо, сексуальное тело. Фото при этом подойдут любые,
+                заказывать специально профессиональную фотосъемку по этому поводу вовсе не нужно. Покажи себя – свое
+                лицо, сексуальное тело. </p>
+            <p class="fw-mt-30 fw-fz-24 fw-font-futura-demic fw-mb-0">Как выбрать лучшие фотографии? Ведь у меня их
+                столько!..</p>
+            <div class="fw-grid fw-grid-5 fw-mt-20">
+                <div class="fw-width-1-4">
+                    <div class="fw-width-1-1 fw-border-radius-10 fw-shadow-bottom fw-bg-color-green-dark">
+                        <div class="fw-width-1-1 fw-box-proportional-100 fw-border-radius-10 fw-overflow-hidden fw-bg-color-grey-dark">
+                            <div class="fw-text-center">
+                                <img src="images/examples1.jpg" alt="" class="fw-height-1-1 fw-width-auto">
+                            </div>
+                        </div>
+                        <div class="fw-border-box fw-pt-10 fw-pl-10 fw-pr-10 fw-pb-10 fw-mb-10 fw-flex fw-flex-middle fw-height-50 fw-mt-inverse-5">
+                            <div class="fw-flex-shrink-no fw-mr-10"><i class="icon icon-checkmark-large"></i></div>
+                            <div class="fw-flex-grow-1">
+                                <p class="fw-mt-0 fw-mb-0 fw-fz-18 fw-font-bold fw-text-uppercase fw-color-white">
+                                    ХОРОШО
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for i in 1..3 %}
+                    <div class="fw-width-1-4">
+                        <div class="fw-width-1-1 fw-border-radius-10 fw-shadow-bottom fw-bg-color-red">
+                            <div class="fw-width-1-1 fw-box-proportional-100 fw-border-radius-10 fw-overflow-hidden fw-bg-color-grey-dark">
+                                <div class="fw-text-center">
+                                    <img src="images/examples{{ i+1 }}.jpg" alt=""
+                                         class="fw-height-1-1 fw-width-auto fw-img-cover">
+                                </div>
+                            </div>
+                            <div class="fw-border-box fw-pt-10 fw-pl-10 fw-pr-10 fw-pb-10 fw-mb-10 fw-flex fw-flex-middle fw-height-50 fw-mt-inverse-5">
+                                <div class="fw-flex-shrink-no fw-mr-10"><i class="icon icon-close-large"></i></div>
+                                <div class="fw-flex-grow-1">
+                                    <p class="fw-mt-0 fw-mb-0 fw-fz-18 fw-font-bold fw-text-uppercase fw-color-white">
+                                        ПЛОХО
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="fw-fz-16 fw-line-height-1-5">
+                <p class="fw-mt-20 fw-mb-0"><span class="fw-font-bold">Нейтральный фон.</span> Любой замысловатый
+                    фон с множеством предметов только отвлекает внимание от главного – тебя. Поэтому постарайся
+                    представить ту фотографию, где ничто бы не мешало любоваться твоим плоским животиком, осиной
+                    талией и эффектными бедрами.</p>
+                <p class="fw-mt-20 fw-mb-0"><span class="fw-font-bold">Меньше искусства.</span> Конкурс бикини
+                    предполагает фотографии из повседневной жизни, с отдыха, а не с обложек модных журналов. Именно
+                    поэтому не старайся застыть в необычной позе, удивить всех томным взглядом, сняться с медведем в
+                    обнимку и т.д.</p>
+                <p class="fw-mt-20 fw-mb-0"><span class="fw-font-bold">Минимум ретуши.</span> Оценивают фотографии
+                    участниц опытные состоятельные мужчины, которые умеют различать естественные снимки от десятки
+                    раз обработанных в фоторедакторах. Поэтому плюсом к твоему снимку будет его натуральность.</p>
+            </div>
+            <div class="fw-text-center fw-mt-40">
+                <label class="form-checkbox">
+                    <input type="checkbox">
+                    <span class="form-checkbox__box"></span>
+                    <span class="fw-color-pink fw-fz-16">Я прочитала рекомендации и мне всё понятно.</span>
+                </label>
             </div>
         </div>
     </div>
