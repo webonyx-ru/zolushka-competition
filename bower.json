@@ -5,6 +5,7 @@
   "author": "qube.kz",
   "dependencies": {
     "owl.carousel": "^2.2.1",
-    "normalize-css": "^7.0.0"
+    "normalize-css": "^7.0.0",
+    "magnific-popup": "^1.1.0"
   }
 }

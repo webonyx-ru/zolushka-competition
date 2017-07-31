@@ -538,6 +538,13 @@ class YOURAPPNAME {
 
         app.popups().closePopup('warning-photo');
         $('input[type="file"]:eq(0)').click();
+    });
+
+    $('.js-open-image-gallery').magnificPopup({
+        type: 'image',
+        gallery:{
+            enabled:true
+        }
     })
 
 })();
