@@ -306,7 +306,6 @@ var YOURAPPNAME = function () {
                 var renderFiles = function renderFiles() {
                     var $imagePreviewBox = $('#image-drop-box__preview');
                     var templates = [];
-
                     if (imageList.length) {
                         for (var i = 0; i < imageList.length; i++) {
                             var imageListSrc = imageList[i];
@@ -318,7 +317,6 @@ var YOURAPPNAME = function () {
                         }
                     }
                 };
-
                 $(this.doc).on('click', '.preview__remove', function (e) {
                     e.preventDefault();
                     showPreloader();
@@ -408,6 +406,85 @@ var YOURAPPNAME = function () {
                 }, 500);
             });
         }
+    }, {
+        key: 'dropBox',
+        value: function dropBox() {
+            var dropBoxClassName = 'drop-box',
+                dropBoxLoaderClassName = 'drop-box__loader',
+                dropBoxElementClassName = 'drop-box__element',
+                dropBoxElementCloneClassName = dropBoxElementClassName.concat('--copy'),
+                dropBoxElementRemoveClassName = dropBoxElementClassName.concat('--remove'),
+                dropBoxInputClassName = 'drop-box__input';
+
+            var files = {};
+
+            var dropBoxElementRemove = function dropBoxElementRemove(e) {
+                e.preventDefault();
+
+                var $dropBoxElementRemoveTrigger = $(this),
+                    $dropBoxElementRemoveTriggerSrc = $dropBoxElementRemoveTrigger.data('src'),
+                    $dropBoxElement = $dropBoxElementRemoveTrigger.closest('.'.concat(dropBoxElementClassName)),
+                    $dropBox = $dropBoxElementRemoveTrigger.closest('.'.concat(dropBoxClassName)),
+                    $dropBoxInput = $dropBox.find('.'.concat(dropBoxInputClassName));
+
+                $dropBoxElement.remove();
+                files[$dropBoxElementRemoveTriggerSrc] = null;
+                delete files[$dropBoxElementRemoveTriggerSrc];
+
+                $dropBoxInput.val('');
+
+                console.log(Object.keys(files));
+            };
+
+            var dropBoxInputChanged = function dropBoxInputChanged(e) {
+                var $dropBoxInput = $(this),
+                    $dropBoxInputFiles = $dropBoxInput.prop('files'),
+                    $dropBox = $dropBoxInput.closest('.'.concat(dropBoxClassName)),
+                    $elementClone = $dropBox.find('.'.concat(dropBoxElementCloneClassName)),
+                    $dropBoxLoader = $dropBox.find('.'.concat(dropBoxLoaderClassName));
+
+                if ($dropBoxInputFiles.length) {
+                    $.each($dropBoxInputFiles, function (key, file) {
+                        if (files[file.name] === undefined) {
+                            files[file.name] = file;
+
+                            var $element = $elementClone.clone(),
+                                $elementImage = $element.find('img'),
+                                $elementRemover = $element.find('.'.concat(dropBoxElementRemoveClassName));
+
+                            $element.removeClass(dropBoxElementCloneClassName);
+                            $element.removeClass('fw-hidden');
+                            $element.addClass(dropBoxElementClassName);
+                            $elementRemover.attr('data-src', file.name);
+
+                            $elementRemover.attr('data-src', file.name);
+
+                            $elementRemover.on('click', dropBoxElementRemove);
+
+                            var reader = new FileReader();
+
+                            reader.onload = function (e) {
+                                $elementImage.attr('src', e.target.result);
+                            };
+
+                            reader.readAsDataURL(file);
+
+                            $element.appendTo($dropBoxLoader);
+                        }
+
+                        if ($dropBoxInputFiles.length - 1 === key) {}
+                    });
+                }
+            };
+
+            $('.'.concat(dropBoxInputClassName)).on('change', dropBoxInputChanged);
+
+            return {
+                reinitialize: function reinitialize() {
+                    $('.'.concat(dropBoxInputClassName)).on('change', dropBoxInputChanged);
+                }
+            };
+        }
     }]);
 
     return YOURAPPNAME;
@@ -440,6 +517,10 @@ var YOURAPPNAME = function () {
     });
 
     app.photosUpload();
+
+    app.dropBox();
+
+    $('#image-drop-box__preview').sortable();
 
     $('.form-select-box').each(function () {
         var $selectBox = $(this);
@@ -498,6 +579,14 @@ var YOURAPPNAME = function () {
                 $selectBox.removeClass('active');
             }
         });
+    });
+
+    $('.profile-share-icon').on('click', function () {
+        $('.profile-share-icon').children('input[type=radio]').attr('checked', false);
+        $('.profile-share-icon').removeClass('active');
+        $(this).children('input[type=radio]').attr('checked', true);
+        $(this).siblings('button').addClass('active');
+        $(this).addClass('active');
     });
 
     $('.js-slide-questionnaire').click(function (e) {
