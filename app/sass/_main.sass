@@ -699,5 +699,48 @@ textarea
 	margin: 0 auto
 	font-size: 16px
 
-.image-make-main
+.photo-menu
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(#000, 0.2)
+	transition: all 0.3s ease
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	//opacity: 0
+	//visibility: hidden
+
+.hover-photo-menu
 	&:hover
+		.photo-menu
+			opacity: 1
+			visibility: visible
+
+.photo-menu__dots
+	position: relative
+	margin-left: 150px
+	margin-top: -40px
+	background: rgba(#000, 0.15)
+	border-radius: 50%
+	display: flex
+	padding: 5px 5px
+	justify-content: center
+	align-items: center
+	color: #fff
+	width: 28px
+	height: 28px
+	&:hover
+		background: rgba(#000, 0.25)
+
+.photo-menu__items
+	margin-top: 30px
+	visibility: hidden
+	opacity: 0
+	transition: all 0.3s ease
+	&.active
+		visibility: visible
+		opacity: 1

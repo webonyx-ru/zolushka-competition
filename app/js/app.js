@@ -654,4 +654,10 @@ var YOURAPPNAME = function () {
             enabled: true
         }
     });
+
+    $('.photo-menu__dots').on('click', function () {
+        var $menuItems = $(this).siblings('.photo-menu__items');
+        if ($menuItems.hasClass('active')) $menuItems.addClass('active');else $menuItems.removeClass('active');
+        console.log(event.target);
+    });
 })();
