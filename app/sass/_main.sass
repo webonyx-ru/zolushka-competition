@@ -701,6 +701,7 @@ textarea
 
 .photo-menu
 	position: absolute
+	z-index: 1000
 	top: 0
 	left: 0
 	right: 0
@@ -711,8 +712,8 @@ textarea
 	align-items: center
 	justify-content: center
 	flex-direction: column
-	//opacity: 0
-	//visibility: hidden
+	opacity: 0
+	visibility: hidden
 
 .hover-photo-menu
 	&:hover
@@ -721,9 +722,12 @@ textarea
 			visibility: visible
 
 .photo-menu__dots
-	position: relative
-	margin-left: 150px
-	margin-top: -40px
+	position: absolute
+	z-index: 1000
+	top: 10px
+	right: 10px
+	//margin-left: 150px
+	//margin-top: -40px
 	background: rgba(#000, 0.15)
 	border-radius: 50%
 	display: flex
@@ -744,3 +748,11 @@ textarea
 	&.active
 		visibility: visible
 		opacity: 1
+
+.open-image-gallery
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 1

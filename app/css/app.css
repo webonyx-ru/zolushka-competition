@@ -4892,6 +4892,7 @@ textarea {
 
 .photo-menu {
   position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -4912,6 +4913,8 @@ textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .hover-photo-menu:hover .photo-menu {
@@ -4920,9 +4923,10 @@ textarea {
 }
 
 .photo-menu__dots {
-  position: relative;
-  margin-left: 150px;
-  margin-top: -40px;
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  right: 10px;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   display: -webkit-box;
@@ -4953,6 +4957,15 @@ textarea {
 .photo-menu__items.active {
   visibility: visible;
   opacity: 1;
+}
+
+.open-image-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 html.popup-opened {

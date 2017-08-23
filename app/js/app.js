@@ -657,7 +657,11 @@ var YOURAPPNAME = function () {
 
     $('.photo-menu__dots').on('click', function () {
         var $menuItems = $(this).siblings('.photo-menu__items');
-        if ($menuItems.hasClass('active')) $menuItems.addClass('active');else $menuItems.removeClass('active');
-        console.log(event.target);
+        if ($menuItems.hasClass('active')) $menuItems.removeClass('active');else $menuItems.addClass('active');
+    });
+
+    $('.hover-photo-menu').hover(function () {
+        var $menuItems = $('.photo-menu__items');
+        if ($menuItems.hasClass('active')) $menuItems.removeClass('active');
     });
 })();
