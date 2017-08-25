@@ -657,11 +657,20 @@ var YOURAPPNAME = function () {
 
     $('.photo-menu__dots').on('click', function () {
         var $menuItems = $(this).siblings('.photo-menu__items');
-        if ($menuItems.hasClass('active')) $menuItems.removeClass('active');else $menuItems.addClass('active');
+        if ($menuItems.hasClass('active')) {
+            $menuItems.removeClass('active');
+            $menuItems.closest('.photo-menu').removeClass('clicked');
+        } else {
+            $menuItems.addClass('active');
+            $menuItems.closest('.photo-menu').addClass('clicked');
+        }
     });
 
     $('.hover-photo-menu').hover(function () {
         var $menuItems = $('.photo-menu__items');
-        if ($menuItems.hasClass('active')) $menuItems.removeClass('active');
+        if ($menuItems.hasClass('active')) {
+            $menuItems.removeClass('active');
+            $menuItems.closest('.photo-menu').removeClass('clicked');
+        }
     });
 })();
