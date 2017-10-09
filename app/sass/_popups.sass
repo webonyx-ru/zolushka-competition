@@ -53,6 +53,10 @@ html.popup-opened
       background-color: transparent
       height: 16px
       transform: rotate(45deg)
+      
+      &.popup__close--white
+        &:before, &:after
+          background-color: #ccc
 
       &::after,
       &::before
@@ -75,3 +79,20 @@ html.popup-opened
         left: 50%
         top: 0
         transform: translateX(-50%)
+        
+
+.popup-wrapper
+  &.popup-wrapper--prolongation
+    height: auto
+    bottom: auto
+    box-shadow: none
+    background-color: transparent
+
+.popup
+  &.popup--prolongation
+    max-width: 1140px
+    background-color: rgba(#000, 0.8)
+    border-radius: 10px
+    padding: 20px
+    color: #fff
+    min-width: 0
